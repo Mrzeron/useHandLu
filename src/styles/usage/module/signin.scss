@@ -1,0 +1,71 @@
+.sigin-container {
+    color: orange;
+    width: 100%;
+    height: 100%;
+    .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('http://113.207.39.148/dlied1.qq.com/qqtalk/lolApp/images/qidong/denglu-android.jpg?mkey=580a001062ceee9a&f=1d58&c=0&p=.jpg') no-repeat;
+        background-size: cover;
+        filter: blur(3px);
+        z-index: -2;
+    }
+    .wrap {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        z-index: 1;
+        header {
+            height: 44px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 44px;
+        }
+        .form {
+            width: 100%;
+            padding: 0 20px;
+            padding-top: 10px;
+            font-size: 12px;
+            @include flexbox();
+            @include flex-direction(column);
+            input::-webkit-input-placeholder {
+                color: orange !important;
+                font-size: 12px !important;
+            }
+            input {
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+            div {
+                padding: 30px 0 10px 0;
+                position: relative;
+                input{
+                	width: 80%;
+
+                }
+                span {
+                    position: absolute;
+                    right: 5px;
+                }
+            }
+            .user_name {
+                width: 100%;
+                @include border($border-width: 0 0 1px 0, $border-color: orange, $border-style: solid, $radius: null);
+            }
+            .user_pass {
+                width: 100%;
+                padding-bottom: 20px;
+            }
+            button{
+            	padding: 6px 0;
+            	background: black;
+            	border: none;
+            	  @include border($border-width: 3px 3px 0 3px, $border-color: orange, $border-style: solid, $radius: null);	
+
+            }
+        }
+    }
+}
