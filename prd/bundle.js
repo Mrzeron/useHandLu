@@ -70,28 +70,32 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	/*
+	 * yjp
+	 */
+	
 	_vue2.default.use(_vueRouter2.default);
 	var router = new _vueRouter2.default();
 	var App = _vue2.default.extend({});
 	router.map({
-	    '/': {
-	        component: _welcome2.default
+	  '/': {
+	    component: _welcome2.default
 	
-	    },
-	    '/signin': {
-	        component: _signin2.default
-	    },
-	    '/index': {
-	        component: _index2.default
+	  },
+	  '/signin': {
+	    component: _signin2.default
+	  },
+	  '/index': {
+	    component: _index2.default
 	
-	    }
+	  }
 	
 	});
 	
 	router.start(App, 'body');
 	//2秒后自动跳转
 	setTimeout(function () {
-	    router.go({ path: '/signin' });
+	  router.go({ path: '/index' });
 	}, 2000);
 
 /***/ },
@@ -5708,7 +5712,7 @@
 /* 13 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\n\n\n\n\n\n";
+	module.exports = "\n\r\n\r\n\r\n<div>hello</div>\r\n\r\n\r\n";
 
 /***/ }
 /******/ ]);

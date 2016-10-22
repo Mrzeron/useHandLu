@@ -6,10 +6,18 @@ import signin from  './components/signin.vue';
 import index from  './components/index.vue';
 
 
+/*
+ * yjp
+ */
+import zixunHome from './components/zixunhome.vue';
+
 
 Vue.use(VueRouter);
 let router = new VueRouter();
 let App = Vue.extend({});
+
+console.log( zixunHome );
+
 router.map({
         '/': {
             component: welcome
@@ -19,8 +27,12 @@ router.map({
        		component:signin
        	},
        	'/index':{
-       		component:index
-       		
+       		component:index,
+       		subRoutes:{
+       			'/zixun':{
+					component: zixunHome
+				}
+       		}
        	}
 
     })
@@ -29,5 +41,5 @@ router.map({
 router.start(App, 'body') 
 //2秒后自动跳转
 setTimeout(function(){
-	router.go({path:'/signin'})
+	router.go({path:'/index'})
 },2000)
