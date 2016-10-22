@@ -258,6 +258,8 @@
 
 
 ### 分工
+    
+    A:yjp   B:Mrzeron   C:ljhme  D:AmazingJTH
 
 	A 资讯首页 + 资讯详情 + ...
 
