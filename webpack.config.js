@@ -6,7 +6,7 @@ module.exports = {
         path: __dirname + '/prd/',
         filename: 'bundle.js'
     },
-    devtool: 'source-map', //配置source-map   
+    devtool: 'source-map', //配置source-map
     //配置server
     /*  devServer: {
           contentBast: __dirname +'/prd',

@@ -3,3 +3,14 @@
 /* 必需 */
 @import "../module/welcome.scss";
 @import "../module/signin.scss";
+@import "../module/my.scss";
+
+.go-transition{
+  transition: all .5s ease;
+},
+.go-enter{
+  transition: translate(100%,0);
+},
+.go-leave{
+  transition: translate(-100%,0);
+}

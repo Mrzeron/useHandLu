@@ -4,7 +4,7 @@ import VueRouter from './libs/vue-router.js';
 import welcome from './components/welcome.vue';
 import signin from  './components/signin.vue';
 import index from  './components/index.vue';
-
+import my from  './components/my.vue';
 
 
 Vue.use(VueRouter);
@@ -20,14 +20,17 @@ router.map({
        	},
        	'/index':{
        		component:index
-       		
-       	}
 
+       	},
+        '/my':{
+       		component:my
+
+       	}
     })
 
 
-router.start(App, 'body') 
+router.start(App, 'body')
 //2秒后自动跳转
-setTimeout(function(){
-	router.go({path:'/signin'})
-},2000)
+// setTimeout(function(){
+// 	router.go({path:'/signin'})
+// },2000)
