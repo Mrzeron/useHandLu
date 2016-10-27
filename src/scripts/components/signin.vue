@@ -1,5 +1,5 @@
 <template>
-<div class="sigin-container">
+<div class="sigin-container" transition="expand">
 	<div class="bg"></div>
 	<div class="wrap">
 		<header>
@@ -11,8 +11,10 @@
 		
 		<div class="user_pass">
 		<input type="text" placeholder="密码"><span>X</span></div>
-		<button type="button" v-link="{path:'/index'}">登录</button>
+		<button type="button" v-link="{path:'/index'}" >登录</button>
+		
 		</div>
+
 	</div>
 		
 </div>

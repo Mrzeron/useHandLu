@@ -3,9 +3,34 @@
 /* 必需 */
 @import "../module/welcome.scss";
 @import "../module/signin.scss";
+<<<<<<< HEAD
 @import "../module/search/search.scss";
 @import "../module/search/searchHeroTime.scss";
 @import "../module/search/heroData.scss";
 @import "../module/search/freeHero.scss";
 @import "../module/search/allHero.scss";
 @import "../module/search/myHero.scss";
+=======
+
+/*  yjp */
+@import "../page/yo-mask.scss";
+@import "../module/comment.scss";
+@import "../module/zixuncontent.scss";
+
+/*  friend   */
+@import "../module/index.scss";
+@import "../module/friend.scss";
+
+.expand-transition{
+	transition:  transform .3s ease;
+}
+.expand-enter{
+	transform: translate(100%,0);
+}
+.expand-leave{
+	transform: translate(-100%,0);	
+}
+#app{
+    height: 100%;
+}
+>>>>>>> master
