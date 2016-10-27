@@ -1,0 +1,232 @@
+#comment {
+    height: 100%;
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    .header {
+        height: 44px;
+        width: 100%;
+        @include flexbox();
+        align-items: center;
+        text-align: center;
+        background: url('http://127.0.0.1/images/header_bg_mid.png') center;
+        background-size: 100%;
+        .back {
+            width: 60px;
+            img {
+                height: 14px;
+            }
+        }
+        .title {
+            flex: 1;
+            color: #baac81;
+        }
+        .more {
+            width: 60px;
+            img {
+                height: 10px;
+            }
+        }
+        
+        .none{ display: none;}
+        //<!-- 嵌入到header的 模态框 -->
+        .choose {
+            position: absolute;
+            min-width: 150px;
+            max-width: 250px;
+            width: 60%;
+            background: #FFFFFF;
+            top: 50%;
+            left: 50%;
+            padding: 5px 10px;
+            text-align: left;
+            @include transform(translate(-50%,-50%));
+            
+            
+            h3 {
+                height: 40px;
+                color: #F0AD4E;
+                font-weight:500;
+                line-height: 40px;
+                font-size: 12px;
+                padding: 0 8px;
+            }
+            .anxia{
+                background: #CCCCCC;
+            }
+            p {
+                &:nth-child(1){
+                     @include border(2px 0 0 0, #ccc);
+                }
+                 @include border(1px 0 0 0, #d9d9d9);
+                height: 36px;
+                line-height: 36px;
+                color: #555;
+                font-size: 12px;
+                padding: 0 8px;
+            }
+        }
+          //编辑框
+        .comment-editor{
+                position: absolute;
+                width: 100%;
+                padding: 5px;
+                height: 90px;
+                background: #fff;
+                bottom:0;
+                z-index: 1;
+                @include flexbox();
+                @include flex-direction(column);
+                >span{
+                    width: 100%;
+                    padding: 0 3px;
+                    font-size:12px;
+                    color: #999; 
+                    &:nth-child(1){
+                        padding: 5px 0;
+                        input{
+                            height: 40px;
+                            width: 100%;
+                            border-radius: 3px;
+                            border: 1px solid #ccc;
+                            padding:0 5px;
+                        }
+                    }
+                    &:nth-child(2){
+                        input{
+                            vertical-align:middle;
+                            padding:0 3px;
+                        }
+                        height: 20px;
+                        padding: 0 0 5px;
+                        @include flexbox();
+                        @include justify-content(space-between);
+                        line-height: 20px;
+                        span:nth-child(2){
+                            height: 30px;
+                            line-height: 30px;
+                            display: inline-block;
+                            width: 60px;
+                            background: #00C9FE;
+                            color: #fff;
+                            text-align: center;
+                            border-radius:5px ;
+                        }
+                    }
+
+                }
+                
+            }
+    }
+    .comment-scroll {
+        @include flex();
+        width: 100%;
+        overflow: hidden;
+        ul {
+            li {
+                padding: 5px;
+                background: #fff;
+                border-bottom: 1px solid #ccc;
+                .li-top {
+                    height: 40xp;
+                    line-height: 40px;
+                    @include flexbox();
+                    @include justify-content( space-between );
+                    @include align-items(center);
+                    >div {
+                        &:nth-child(1) {
+                            height: 100%;
+                            width: 40px;
+                            img {
+                                height: 36px;
+                                width: 36px;
+                                background: #fff;
+                                border-radius: 5px;
+                            }
+                        }
+                        &:nth-child(2) {
+                            height: 100%;
+                            @include flex();
+                            line-height: 20px;
+                            h3 {
+                                height: 18px;
+                                font-size: 14px;
+                                color: #888;
+                                font-weight: 100;
+                            }
+                            >div {
+                                height: 10px;
+                                font-size: 10px;
+                                transform: scale(.6);
+                                margin-left: -56px;
+                                span {
+                                    border-radius: 3px;
+                                    margin: 0 6px;
+                                    background: #ff7577;
+                                    padding: 2px 5px;
+                                    color: #fff;
+                                }
+                                img {
+                                    height: 12px;
+                                }
+                            }
+                        }
+                        &:nth-child(3) {
+                            width: 60px;
+                            text-align: center;
+                            font-size: 10px;
+                            color: #ccc;
+                            line-height: 30px;
+                        }
+                    }
+                }
+                .li-con {
+                    text-indent: 2em;
+                    padding: 0 5px;
+                    line-height: 20px;
+                    font-size: 12px;
+                    color: #888;
+                }
+                .li-bot {
+                    height: 20px;
+                    font-size: 10px;
+                    color: #ccc;
+                    line-height: 20px;
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    position: relative;
+                    span {
+                        padding: 0 5px;
+                        position:relative;
+                        i{
+                            display: none;
+                        }
+                        .zhaning{
+                            position: absolute;
+                            top: -20px;
+                            left:5px;
+                            display: inline-block;
+                            font-size: 12px;
+                            font-weight: 500;
+                            color: #FF5555;
+                            padding:4px 6px;
+                            animation: myfirst 1s;
+                        }
+                        &:nth-child(2) {
+                            color: #4e8dc4;
+                        }
+                        img {
+                            height: 12px;
+                            width: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ @keyframes myfirst{
+    0% {top:-20px; opacity: 1;}
+    99% {top: -35px;opacity: 0.3; }
+    100% {top: -35px;opacity: 0;}
+}
