@@ -83,5 +83,5 @@ router.start(App, 'body')
 
 //2秒后自动跳转
 setTimeout(function(){
-  // router.go({path:'/index/zixun'});
-},1000);
+   router.go({path:'/index/zixun'});
+},2000);
