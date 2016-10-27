@@ -33,11 +33,6 @@
 	</div>
 </template>
 <script>
-	var Vue = require('../../libs/vue.js');
-	var VueResource = require('../../libs/vue-resource.js');
-	var VueRouter = require('../../libs/vue-router.js');
-	Vue.use(VueResource);
-	Vue.use(VueRouter);
 	let router = new VueRouter();
 	import VueSearchBox from '../../plugins/vue-searchBox';
 	Vue.use(VueSearchBox);

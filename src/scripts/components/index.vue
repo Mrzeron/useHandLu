@@ -1,7 +1,4 @@
 <template>
-<<<<<<< HEAD
-	
-=======
 <div class="index-container"><div class="swiper-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide left" >
@@ -35,14 +32,8 @@
 </div>
 </div>
 
-
-
-
->>>>>>> master
 </template>
 <script>
-	/*import {getIndex }from '../vuex/getters.js';
-	import  {changeIndex} from '../vuex/actions.js';*/
 var mySwiper=null;
 	export default{
 		data(){
@@ -83,7 +74,7 @@ var mySwiper=null;
 						img:"http://offtkz7wd.bkt.clouddn.com/img/tab_discovery.png",
 						cli_img:"http://offtkz7wd.bkt.clouddn.com/img/tab_discovery_checked.png",
 						title:"发现",
-							path:'/index'
+							path:'/index/search'
 					},
 					{
 						img:"http://offtkz7wd.bkt.clouddn.com/img/tab_me.png",
@@ -97,25 +88,12 @@ var mySwiper=null;
 			
 			
 		},
-		/*	vuex:{
-				getters:{
-					curIndex:getIndex
-				},
-				actions:{
-					change:changeIndex
-				}
-			},*/
 		ready(){
 			 mySwiper = new Swiper('.swiper-container', {
 				slidesPerView:'auto',
 				effert:"coverflow",
 				initialSlide :2
-				
-	
-
-
-		})
-
+			})
 		},
 		methods:{
 			showMsg(){
@@ -126,8 +104,7 @@ var mySwiper=null;
 			},
 			change_nav(index){
 				/*this.change(index)*/
-				this.cur=index;
-				
+				this.cur=index;				
 			}
 		}	
 	}

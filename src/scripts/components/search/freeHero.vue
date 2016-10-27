@@ -18,9 +18,6 @@
 	</div>
 </template>
 <script>
-	var Vue = require('../../libs/vue.js');
-	var VueResource = require('../../libs/vue-resource.js');
-	Vue.use(VueResource);
 	export default {
 		data(){
 			return {

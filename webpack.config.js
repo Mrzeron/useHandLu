@@ -9,20 +9,6 @@ module.exports = {
     },
     devtool: 'source-map', //配置source-map   
     //配置server
-      devServer: {
-          contentBast: __dirname +'/prd',
-          port: 80,
-          inline: true,
-          proxy:{
-            '/rest/*':{
-              target:'http://localhost:8888',
-              secure:true,
-              pathRewrite:{
-                '^/rest':''
-              }
-            }
-          }
-      },
     devServer: {
         contentBase: __dirname + '/prd',
         port: 80,

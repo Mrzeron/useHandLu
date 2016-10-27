@@ -25,7 +25,7 @@
 		</div>
 		<div class="searchContainer">
 			<ul class="allList">
-				<li v-link="{path:'heroData'}" v-for="al in allList">
+				<li v-link="{path:'../heroData'}" v-for="al in allList">
 					<img v-bind:src="al.image_url_big">
 					<b>{{al.title}}</b>
 				</li>
@@ -75,16 +75,10 @@
 				</template>
 			</ul>
 		</div>
-		<div class="searchFooter"></div>
 	</div>
 </template>
 <script>
-	var Vue = require('../../libs/vue.js');
-	var VueResource = require('../../libs/vue-resource.js');
-	var VueRouter = require('../../libs/vue-router.js');
   	var myScroll;
-	Vue.use(VueResource);
-	Vue.use(VueRouter);
 	let router = new VueRouter();
 	import VueDialog from '../../plugins/vue-dialog';
 	Vue.use(VueDialog);

@@ -29,9 +29,6 @@
 </template>
 <script>
 	var mySwiper = null;
-	var Vue = require('../../libs/vue.js');
-	var VueRouter = require('../../libs/vue-router.js');
-	Vue.use(VueRouter);
 	let router = new VueRouter();
 	import freeHero from './freeHero.vue';
 	import myHero from './myHero.vue';
