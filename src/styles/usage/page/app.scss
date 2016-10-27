@@ -1,5 +1,18 @@
 @charset "utf-8";
 @import "../core/reset";
 /* 必需 */
+
 @import "../module/welcome.scss";
 @import "../module/signin.scss";
+@import "../module/index.scss";
+@import "../module/friend.scss";
+
+.expand-transition{
+	transition:  transform .3s ease;
+}
+.expand-enter{
+	transform: translate(100%,0);
+}
+.expand-leave{
+	transform: translate(-100%,0);	
+}

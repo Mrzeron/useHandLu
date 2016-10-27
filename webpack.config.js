@@ -16,7 +16,16 @@ module.exports = {
     devServer: {
         contentBase: __dirname + '/prd',
         port: 80,
-        inline: true
+        inline: true,
+        proxy:{
+        '/rest/*':{
+            target: 'http://localhost:2333',
+            secure:false,
+            pathRewrite:{
+                '^/rest':''   //以rest开头的替换为空 /rest/list->localhost:8888/list
+            }
+            }    //前面以/rest/开头的所有都使用代理转发
+    } 
     },
     module: {
         loaders: [{
@@ -37,8 +46,7 @@ module.exports = {
     },
     vue:{
 		loaders:{
-			js:'babel',
-			css: ET.extract('vue-style-loader','css','sass')
+			js:'babel'
 		}
 	},
     plugins: [

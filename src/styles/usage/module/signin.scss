@@ -1,5 +1,5 @@
 .sigin-container {
-    color: orange;
+    color: #CDB384;
     width: 100%;
     height: 100%;
     .bg {
@@ -31,7 +31,7 @@
             @include flexbox();
             @include flex-direction(column);
             input::-webkit-input-placeholder {
-                color: orange !important;
+                color: #CDB384 !important;
                 font-size: 12px !important;
             }
             input {
@@ -53,7 +53,7 @@
             }
             .user_name {
                 width: 100%;
-                @include border($border-width: 0 0 1px 0, $border-color: orange, $border-style: solid, $radius: null);
+                @include border($border-width: 0 0 1px 0, $border-color: #CDB384, $border-style: solid, $radius: null);
             }
             .user_pass {
                 width: 100%;
@@ -63,7 +63,7 @@
             	padding: 6px 0;
             	background: black;
             	border: none;
-            	  @include border($border-width: 3px 3px 0 3px, $border-color: orange, $border-style: solid, $radius: null);	
+            	  @include border($border-width: 3px 3px 0 3px, $border-color: #CDB384, $border-style: solid, $radius: null);	
 
             }
         }
