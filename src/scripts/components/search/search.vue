@@ -9,8 +9,8 @@
 				<b>发现</b>
 				<i>扫一扫</i>
 			</div>
-			<div class="teamClub">
-				<div id="wrapper">
+			<div class="teamClub" >
+				<div id="wrapper" v-on:touchstart.stop="wrapper">
 					<ul>
 						<li v-for="club in searchClub">
 							<img v-bind:src="club.iconUrl">
@@ -173,6 +173,9 @@
 			},
 			hide(){
 		        this.isShow = false;
+		    },
+		    wrapper(){
+		    	console.log( 0);
 		    }
 		}
 	}

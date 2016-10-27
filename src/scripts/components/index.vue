@@ -11,7 +11,7 @@
 		</ul>
 		<div class="setting"><img src="http://offtkz7wd.bkt.clouddn.com/img/menu_setting.png"><span>设置</span></div>
     </div>
-    <div class="swiper-slide right" @click="hideMsg">
+    <div class="swiper-slide right" @click="hideMsg" >
     
     	<!-- 路由页面 -->
 		<router-view></router-view>
