@@ -1,0 +1,40 @@
+.searchHeroTime{
+display: flex;
+		height: 100%;
+		flex-direction: column;
+
+		.header{
+			height: 44px; 
+			width: 100%;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			background: url('/images/header_bg_mid.png') center;
+			background-size: 100%;
+
+			.back{
+				width: 60px;
+				img{
+					height:16px;
+				}
+			}
+			.title{
+				flex: 1;
+				color: #baac81; 
+			}
+			.more{
+				width: 60px;
+				img{
+					height: 10px;
+				}
+			}
+		}
+
+		iframe{
+			padding:0;
+			border:0;
+			margin:0;
+			width: 100%;
+			flex:1;
+		}
+}

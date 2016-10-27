@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import "../../../lib/fragment/yo-dialog";
+@import "../../../lib/fragment/yo-mask";
+@include yo-dialog(
+	$name:a
+){
+	left: 50%;
+	top: 50%;
+	@include transform(translate(-50%, -50%));
+    font-size: 100px;
+    height: 1.50rem;
+}
+.searchHome{
+	height:100%;
+	@include flexbox();
+	@include flex-direction(column);
+	background: #EEEFF0;
+	.headerBox{
+		height:127px;
+		@include flexbox();
+		@include flex-direction(column);
+		background: url("/images/header_bg_small.png") no-repeat;
+		.header{
+			@include flexbox();
+			padding:0 16px;
+			@include justify-content(space-between);
+			height:44px;
+			@include align-items(center);
+			color:#D0AC66;
+			font-size: 12px;
+		}
+	}
+	.teamClub{
+		@include flexbox();
+		width:100%;
+		#wrapper{
+			@include flexbox();
+			width:100%;
+			ul{
+				@include flexbox();
+				li{
+					@include flexbox();
+					@include flex-direction(column);
+					padding:0 8px;
+					@include align-items(center);
+					img{
+						width:36px;
+						border-radius: 50%;
+					}
+					b{
+						color:#fff;
+						font-size: 10px;
+						margin-top: 3px;
+					}
+				}
+			}
+		}
+	}
+	.fansClub{
+		@include flexbox();
+		@include justify-content(center);
+		color:#D0AC66;
+		font-size: 10px;
+		margin-top: 4px;
+		span{
+			border:1px solid #D0AC66;
+			padding:0 3px;
+			border-radius: 2px;
+		}
+	}
+	.searchContainer{
+		@include flexbox();
+		@include flex-direction(column);
+		@include flex(1);
+		width:100%;
+		.allList{
+			@include flexbox();
+			@include justify-content(space-between);
+			padding:10px 31px;
+			border-bottom: 1px solid #E1E2E2;
+			background: #fff;
+			li{
+				@include flexbox();
+				@include flex-direction(column);
+				@include justify-content(center);
+				@include align-items(center);
+				img{
+					width:30px;
+					height:30px;
+				}
+				b{
+					font-size: 10px;
+					color:#1B1B1B;
+					margin-top:6px;
+				}
+			}
+		}
+		.sortList{
+			@include flexbox();
+			@include flex-direction(column);
+			background: #fff;
+			.parentLi{
+				@include flexbox();
+				@include align-items(center);
+				@include justify-content(space-between);
+				padding: 10px 0;
+				border-bottom: 1px solid #E1E2E2;
+				div{
+					img{
+						width:18px;
+						margin:0 8px;
+					}
+					b{
+						font-size: 10px;
+						color:#1B1B1B;
+					}
+				}
+				.download{
+					b{
+						font-size: .16rem;
+						color: #B0B0B0;
+						display: inline-block;
+						margin-right: 10px;
+					}
+					.downFont{
+						font-size: .10rem;
+						color: #D0AC66;
+						border: 1px solid  #D0AC66;
+						padding: 2px 8px;
+						border-radius: 3px;
+					}
+					.bRotate{
+						transform:rotate(180deg);
+						margin-right: 10px;
+					}
+				}
+			}
+
+			.childLi{
+				background: #EEEFF0;
+				ul{
+					@include flexbox();
+					li{
+						@include flexbox();
+						@include flex-direction(column);
+						@include align-items(center);
+						padding:10px 20px;
+						img{
+							width:18px;
+						}
+						b{
+							font-size: 10px;
+					        color:#1B1B1B;
+					        margin-top: 6px;
+						}
+					}
+				}
+			}
+			.forHidden{
+				display: none;
+			}
+
+		}
+	}
+	.searchFooter{
+		@include flexbox();
+		height: 44px;
+		border-top: 1px solid #BDBDBD;
+	}
+
+}

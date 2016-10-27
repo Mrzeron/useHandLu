@@ -779,4 +779,1135 @@ a {
               -webkit-transform: scale(0.33333);
               transform: scale(0.33333); } }
 
+/**
+ * @module element
+ * @method yo-btn
+ * @version 3.0.0
+ * @description 构造按钮的自定义使用方法，勿使用`input`标签，因为边框为`::after`实现
+ * @demo http://doyoe.github.io/Yo/demo/element/yo-btn.html
+ * @param {String} $name 定义扩展名称 <3.0.0>
+ * @param {Length} $border-width 边框厚度 <3.0.0>
+ * @param {Color} $border-color 边框色 <3.0.0>
+ * @param {Color} $bgcolor 背景色 <3.0.0>
+ * @param {Color} $color 文本色 <3.0.0>
+ * @param {Color} $active-border-color 触点（鼠标，手指或其它）按下时边框色 <3.0.0>
+ * @param {Color} $active-bgcolor 触点（鼠标，手指或其它）按下时背景色 <3.0.0>
+ * @param {Color} $active-color 触点（鼠标，手指或其它）按下时文本色 <3.0.0>
+ * @param {Length} $padding 内补白 <3.0.0>
+ * @param {Length} $radius 圆角半径长度 <3.0.0>
+ * @param {Length} $font-size 字号大小 <3.0.0>
+ * @param {Length} $width 宽度 <3.0.0>
+ * @param {Length} $height 高度 <3.0.0>
+ */
+.yo-btn {
+  display: inline-block;
+  padding: 0 1.2em;
+  vertical-align: top;
+  position: relative;
+  border-radius: 0.05rem;
+  border: 0 none;
+  background-color: #ff801a;
+  color: #fff;
+  text-align: center;
+  cursor: pointer; }
+  .yo-btn::after {
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    content: " ";
+    border-color: #d36105;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; }
+    @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+      .yo-btn::after {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.05rem; } }
+    @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+      .yo-btn::after {
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        border-radius: 0.1rem; } }
+    @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+      .yo-btn::after {
+        width: 300%;
+        height: 300%;
+        -webkit-transform: scale(0.33333);
+        transform: scale(0.33333);
+        border-radius: 0.15rem; } }
+  .yo-btn-disabled {
+    opacity: 1;
+    cursor: not-allowed; }
+    .yo-btn-disabled, .yo-btn-disabled:active {
+      background-color: #ffaa67;
+      color: white; }
+      .yo-btn-disabled::after, .yo-btn-disabled:active::after {
+        border-color: #fa7f1c; }
+  .yo-btn-s {
+    height: 0.28rem;
+    line-height: 0.28rem;
+    font-size: 0.12rem; }
+  .yo-btn-m {
+    height: 0.36rem;
+    line-height: 0.36rem;
+    font-size: 0.14rem; }
+  .yo-btn-l {
+    height: 0.44rem;
+    line-height: 0.44rem;
+    font-size: 0.16rem; }
+  .yo-btn-stacked {
+    display: block;
+    width: 100%; }
+
+/**
+ * @module fragment
+ * @method yo-dialog
+ * @version 3.0.0
+ * @description 构造yo-dialog的自定义使用方法
+ * @demo http://doyoe.github.io/Yo/demo/fragment/yo-dialog.html
+ * @param {String} $name 定义扩展名称 <3.0.0>
+ * @param {Length} $width 宽度 <3.0.0>
+ * @param {Length} $height 高度 <3.0.0>
+ * @param {Length} $radius 圆角半径长度 <3.0.0>
+ * @param {Color} $border-color 边框色 <3.0.0>
+ * @param {Color} $title-color 标题文本色 <3.0.0>
+ * @param {Length} $title-font-size 标题字号 <3.0.0>
+ * @param {Length} $bd-padding 主体内补白 <3.0.0>
+ * @param {Length} $bd-font-size 主体字号 <3.0.0>
+ */
+.yo-dialog {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1001;
+  padding-top: .15rem;
+  min-width: 2.8rem;
+  max-width: 90%;
+  border-radius: 0.1rem;
+  background-color: #fff;
+  text-align: center; }
+  .yo-dialog > .hd {
+    position: relative;
+    overflow: hidden; }
+    .yo-dialog > .hd .title {
+      overflow: hidden;
+      height: 100%;
+      margin: 0 .6rem;
+      color: #212121;
+      font-size: 0.16rem; }
+    .yo-dialog > .hd .regret,
+    .yo-dialog > .hd .affirm {
+      position: absolute;
+      top: 0; }
+    .yo-dialog > .hd .regret {
+      left: .1rem; }
+    .yo-dialog > .hd .affirm {
+      right: .1rem; }
+  .yo-dialog > .bd {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    height: .1px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    min-height: .4rem;
+    padding: 0.03rem 0.1rem 0.15rem;
+    font-size: 0.16rem; }
+  .yo-dialog > .ft {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    text-align: center; }
+    .yo-dialog > .ft .yo-btn-dialog {
+      border-radius: 0;
+      background-color: #fff;
+      color: #00afc7;
+      display: block;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+      width: .1px; }
+      .yo-dialog > .ft .yo-btn-dialog::after {
+        border-width: 1px 1px 0 0;
+        border-color: #ccc; }
+        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+          .yo-dialog > .ft .yo-btn-dialog::after {
+            border-radius: 0; } }
+        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+          .yo-dialog > .ft .yo-btn-dialog::after {
+            border-radius: 0; } }
+        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+          .yo-dialog > .ft .yo-btn-dialog::after {
+            border-radius: 0; } }
+      .yo-dialog > .ft .yo-btn-dialog:active {
+        background-color: #f9f9f9; }
+      .yo-dialog > .ft .yo-btn-dialog.yo-btn-disabled, .yo-dialog > .ft .yo-btn-dialog.yo-btn-disabled:active {
+        background-color: white;
+        color: #94f2ff; }
+        .yo-dialog > .ft .yo-btn-dialog.yo-btn-disabled::after, .yo-dialog > .ft .yo-btn-dialog.yo-btn-disabled:active::after {
+          border-color: #ebebeb; }
+      .yo-dialog > .ft .yo-btn-dialog:last-child {
+        font-weight: bold;
+        border-bottom-right-radius: 0.1rem; }
+        .yo-dialog > .ft .yo-btn-dialog:last-child::after {
+          border-right-width: 0; }
+      .yo-dialog > .ft .yo-btn-dialog:first-child {
+        border-bottom-left-radius: 0.1rem; }
+
+/**
+ * @module fragment
+ * @method yo-mask
+ * @version 3.0.0
+ * @description 构造yo-mask的自定义使用方法
+ * @demo http://doyoe.github.io/Yo/demo/fragment/yo-mask.html
+ * @param {String} $name 定义扩展名称 <3.0.0>
+ * @param {Color} $bgcolor 背景色 <3.0.0>
+ */
+.yo-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.yo-dialog-a {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  height: 1.50rem; }
+
+.searchHome {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  background: #EEEFF0; }
+  .searchHome .headerBox {
+    height: 127px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    background: url("/images/header_bg_small.png") no-repeat; }
+    .searchHome .headerBox .header {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      padding: 0 16px;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      height: 44px;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      color: #D0AC66;
+      font-size: 12px; }
+  .searchHome .teamClub {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%; }
+    .searchHome .teamClub #wrapper {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      width: 100%; }
+      .searchHome .teamClub #wrapper ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex; }
+        .searchHome .teamClub #wrapper ul li {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+          padding: 0 8px;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          align-items: center; }
+          .searchHome .teamClub #wrapper ul li img {
+            width: 36px;
+            border-radius: 50%; }
+          .searchHome .teamClub #wrapper ul li b {
+            color: #fff;
+            font-size: 10px;
+            margin-top: 3px; }
+  .searchHome .fansClub {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    color: #D0AC66;
+    font-size: 10px;
+    margin-top: 4px; }
+    .searchHome .fansClub span {
+      border: 1px solid #D0AC66;
+      padding: 0 3px;
+      border-radius: 2px; }
+  .searchHome .searchContainer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: .1px;
+    width: 100%; }
+    .searchHome .searchContainer .allList {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      padding: 10px 31px;
+      border-bottom: 1px solid #E1E2E2;
+      background: #fff; }
+      .searchHome .searchContainer .allList li {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        .searchHome .searchContainer .allList li img {
+          width: 30px;
+          height: 30px; }
+        .searchHome .searchContainer .allList li b {
+          font-size: 10px;
+          color: #1B1B1B;
+          margin-top: 6px; }
+    .searchHome .searchContainer .sortList {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      background: #fff; }
+      .searchHome .searchContainer .sortList .parentLi {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #E1E2E2; }
+        .searchHome .searchContainer .sortList .parentLi div img {
+          width: 18px;
+          margin: 0 8px; }
+        .searchHome .searchContainer .sortList .parentLi div b {
+          font-size: 10px;
+          color: #1B1B1B; }
+        .searchHome .searchContainer .sortList .parentLi .download b {
+          font-size: .16rem;
+          color: #B0B0B0;
+          display: inline-block;
+          margin-right: 10px; }
+        .searchHome .searchContainer .sortList .parentLi .download .downFont {
+          font-size: .10rem;
+          color: #D0AC66;
+          border: 1px solid  #D0AC66;
+          padding: 2px 8px;
+          border-radius: 3px; }
+        .searchHome .searchContainer .sortList .parentLi .download .bRotate {
+          transform: rotate(180deg);
+          margin-right: 10px; }
+      .searchHome .searchContainer .sortList .childLi {
+        background: #EEEFF0; }
+        .searchHome .searchContainer .sortList .childLi ul {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex; }
+          .searchHome .searchContainer .sortList .childLi ul li {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            padding: 10px 20px; }
+            .searchHome .searchContainer .sortList .childLi ul li img {
+              width: 18px; }
+            .searchHome .searchContainer .sortList .childLi ul li b {
+              font-size: 10px;
+              color: #1B1B1B;
+              margin-top: 6px; }
+      .searchHome .searchContainer .sortList .forHidden {
+        display: none; }
+  .searchHome .searchFooter {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 44px;
+    border-top: 1px solid #BDBDBD; }
+
+.searchHeroTime {
+  display: flex;
+  height: 100%;
+  flex-direction: column; }
+  .searchHeroTime .header {
+    height: 44px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: url("/images/header_bg_mid.png") center;
+    background-size: 100%; }
+    .searchHeroTime .header .back {
+      width: 60px; }
+      .searchHeroTime .header .back img {
+        height: 16px; }
+    .searchHeroTime .header .title {
+      flex: 1;
+      color: #baac81; }
+    .searchHeroTime .header .more {
+      width: 60px; }
+      .searchHeroTime .header .more img {
+        height: 10px; }
+  .searchHeroTime iframe {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    width: 100%;
+    flex: 1; }
+
+.heroData {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%; }
+  .heroData .heroDataHeader {
+    height: 44px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: url("/images/header_bg_mid.png") center;
+    background-size: 100%; }
+    .heroData .heroDataHeader .back {
+      width: 60px; }
+      .heroData .heroDataHeader .back img {
+        height: 14px; }
+    .heroData .heroDataHeader .title {
+      flex: 1;
+      color: #baac81; }
+    .heroData .heroDataHeader .more {
+      width: 60px; }
+      .heroData .heroDataHeader .more img {
+        height: 10px; }
+  .heroData .heroDataNav {
+    height: .34rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background: #EAEAEA;
+    padding: 0 .30rem;
+    border-bottom: 1px solid #DBDBDB; }
+    .heroData .heroDataNav li {
+      font-size: 10px;
+      color: #A5A4A4; }
+  .heroData .heroDataContainer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: .1px;
+    width: 100%;
+    background: #fff; }
+
+.freeHero {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  width: 100%; }
+  .freeHero .title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: .24rem;
+    width: 100%;
+    padding: 8px; }
+    .freeHero .title div {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      height: .24rem;
+      width: 100%;
+      background: #CECECE;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      font-size: 10px;
+      color: #fff;
+      border-radius: 3px; }
+  .freeHero .freeHeroList {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+    margin: 20px 12px; }
+    .freeHero .freeHeroList li {
+      width: 50%;
+      padding: 3px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center; }
+      .freeHero .freeHeroList li img {
+        height: .44rem; }
+      .freeHero .freeHeroList li div {
+        margin-left: 4px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column; }
+        .freeHero .freeHeroList li div span {
+          font-size: .1rem; }
+        .freeHero .freeHeroList li div .name {
+          font-weight: bold; }
+        .freeHero .freeHeroList li div .nick {
+          color: #919191; }
+        .freeHero .freeHeroList li div .tag {
+          color: #4B8CC4; }
+
+/**
+ * @module element
+ * @method yo-btn
+ * @version 3.0.0
+ * @description 构造按钮的自定义使用方法，勿使用`input`标签，因为边框为`::after`实现
+ * @demo http://doyoe.github.io/Yo/demo/element/yo-btn.html
+ * @param {String} $name 定义扩展名称 <3.0.0>
+ * @param {Length} $border-width 边框厚度 <3.0.0>
+ * @param {Color} $border-color 边框色 <3.0.0>
+ * @param {Color} $bgcolor 背景色 <3.0.0>
+ * @param {Color} $color 文本色 <3.0.0>
+ * @param {Color} $active-border-color 触点（鼠标，手指或其它）按下时边框色 <3.0.0>
+ * @param {Color} $active-bgcolor 触点（鼠标，手指或其它）按下时背景色 <3.0.0>
+ * @param {Color} $active-color 触点（鼠标，手指或其它）按下时文本色 <3.0.0>
+ * @param {Length} $padding 内补白 <3.0.0>
+ * @param {Length} $radius 圆角半径长度 <3.0.0>
+ * @param {Length} $font-size 字号大小 <3.0.0>
+ * @param {Length} $width 宽度 <3.0.0>
+ * @param {Length} $height 高度 <3.0.0>
+ */
+.yo-btn {
+  display: inline-block;
+  padding: 0 1.2em;
+  vertical-align: top;
+  position: relative;
+  border-radius: 0.05rem;
+  border: 0 none;
+  background-color: #ff801a;
+  color: #fff;
+  text-align: center;
+  cursor: pointer; }
+  .yo-btn::after {
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    content: " ";
+    border-color: #d36105;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; }
+    @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+      .yo-btn::after {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.05rem; } }
+    @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+      .yo-btn::after {
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        border-radius: 0.1rem; } }
+    @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+      .yo-btn::after {
+        width: 300%;
+        height: 300%;
+        -webkit-transform: scale(0.33333);
+        transform: scale(0.33333);
+        border-radius: 0.15rem; } }
+  .yo-btn-disabled {
+    opacity: 1;
+    cursor: not-allowed; }
+    .yo-btn-disabled, .yo-btn-disabled:active {
+      background-color: #ffaa67;
+      color: white; }
+      .yo-btn-disabled::after, .yo-btn-disabled:active::after {
+        border-color: #fa7f1c; }
+  .yo-btn-s {
+    height: 0.28rem;
+    line-height: 0.28rem;
+    font-size: 0.12rem; }
+  .yo-btn-m {
+    height: 0.36rem;
+    line-height: 0.36rem;
+    font-size: 0.14rem; }
+  .yo-btn-l {
+    height: 0.44rem;
+    line-height: 0.44rem;
+    font-size: 0.16rem; }
+  .yo-btn-stacked {
+    display: block;
+    width: 100%; }
+
+/**
+ * @module fragment
+ * @method yo-search
+ * @version 3.0.0
+ * @description 构造搜索框的自定义使用方法
+ * @demo http://doyoe.github.io/Yo/demo/fragment/yo-search.html
+ * @param {String} $name 定义扩展名称 <3.0.0>
+ * @param {Length} $padding 搜索区内补白 <3.0.0>
+ * @param {Color} $bgcolor 搜索区背景色 <3.0.0>
+ * @param {Length} $font-size 搜索区字号 <3.0.0>
+ * @param {Length} $input-height 输入框高度 <3.0.0>
+ * @param {Length} $input-radius 输入框圆角半径 <3.0.0>
+ * @param {Color} $input-bgcolor 输入框背景色 <3.0.0>
+ * @param {Color} $input-color 输入框文本色 <3.0.0>
+ * @param {Color} $placeholder-color 输入框placeholder文本色 <3.0.0>
+ * @param {Color} $btn-bgcolor 搜索按钮底色 <3.0.0>
+ * @param {Color} $btn-color 搜索按钮文本色 <3.0.0>
+ * @param {Length} $cancel-width 取消按钮区域宽度 <3.0.0>
+ * @param {Color} $cancel-color 取消按钮颜色 <3.0.0>
+ */
+.yo-search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  padding: 0.07rem 0.1rem;
+  background-color: #eee;
+  line-height: 0.3rem; }
+  .yo-search > .action {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: .1px;
+    position: relative;
+    color: #bbb; }
+    .yo-search > .action > .input {
+      display: block;
+      -webkit-appearance: none;
+      appearance: none;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+      width: .1px;
+      position: relative;
+      z-index: 1;
+      padding-left: .1rem;
+      border: 0 none;
+      border-radius: 0.05rem;
+      background-color: #fff;
+      color: #212121;
+      vertical-align: top; }
+      .yo-search > .action > .input::-webkit-input-placeholder {
+        color: #bbb; }
+      .yo-search > .action > .input-shrink {
+        -webkit-transition: margin 0.2s ease-out;
+        transition: margin 0.2s ease-out; }
+        .yo-search > .action > .input-shrink:focus {
+          margin-right: 0.5rem; }
+    .yo-search > .action > .yo-ico {
+      position: absolute;
+      z-index: 2;
+      width: .28rem;
+      text-align: center; }
+    .yo-search > .action > .yo-ico + .input {
+      padding-left: .28rem; }
+  .yo-search > .cancel {
+    position: absolute;
+    right: 0;
+    width: 0.6rem;
+    color: #00afc7;
+    text-align: center; }
+  .yo-search .yo-btn {
+    padding: 0 0.1rem;
+    background-color: #1ba9ba;
+    display: block;
+    min-width: .4rem;
+    margin-left: .1rem; }
+    .yo-search .yo-btn::after {
+      border-width: 0; }
+    .yo-search .yo-btn.yo-btn-disabled, .yo-search .yo-btn.yo-btn-disabled:active {
+      background-color: #3ed1e3; }
+
+.allHero {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: #fff; }
+  .allHero .searchBox {
+    z-index: 999; }
+    .allHero .searchBox div form {
+      background: #fff; }
+      .allHero .searchBox div form label {
+        width: 100%;
+        border: 1px solid #E1E1E1;
+        border-radius: .04rem; }
+        .allHero .searchBox div form label span {
+          width: 10%; }
+        .allHero .searchBox div form label input {
+          width: 93%;
+          border: none; }
+  .allHero .title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: .24rem;
+    width: 100%;
+    padding: 8px; }
+    .allHero .title div {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      height: .24rem;
+      width: 100%;
+      background: #CECECE;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      font-size: 10px;
+      color: #fff;
+      border-radius: 3px; }
+  .allHero #wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex; }
+    .allHero #wrapper .allHeroList {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      width: 100%;
+      height: 100%;
+      margin: 0 12px 20px 12px; }
+      .allHero #wrapper .allHeroList li {
+        width: 50%;
+        padding: 3px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        .allHero #wrapper .allHeroList li img {
+          height: .44rem; }
+        .allHero #wrapper .allHeroList li div {
+          margin-left: 4px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          flex-direction: column; }
+          .allHero #wrapper .allHeroList li div span {
+            font-size: .1rem; }
+          .allHero #wrapper .allHeroList li div .name {
+            font-weight: bold; }
+          .allHero #wrapper .allHeroList li div .nick {
+            color: #919191; }
+          .allHero #wrapper .allHeroList li div .tag {
+            color: #4B8CC4; }
+
+/**
+ * @module element
+ * @method yo-btn
+ * @version 3.0.0
+ * @description 构造按钮的自定义使用方法，勿使用`input`标签，因为边框为`::after`实现
+ * @demo http://doyoe.github.io/Yo/demo/element/yo-btn.html
+ * @param {String} $name 定义扩展名称 <3.0.0>
+ * @param {Length} $border-width 边框厚度 <3.0.0>
+ * @param {Color} $border-color 边框色 <3.0.0>
+ * @param {Color} $bgcolor 背景色 <3.0.0>
+ * @param {Color} $color 文本色 <3.0.0>
+ * @param {Color} $active-border-color 触点（鼠标，手指或其它）按下时边框色 <3.0.0>
+ * @param {Color} $active-bgcolor 触点（鼠标，手指或其它）按下时背景色 <3.0.0>
+ * @param {Color} $active-color 触点（鼠标，手指或其它）按下时文本色 <3.0.0>
+ * @param {Length} $padding 内补白 <3.0.0>
+ * @param {Length} $radius 圆角半径长度 <3.0.0>
+ * @param {Length} $font-size 字号大小 <3.0.0>
+ * @param {Length} $width 宽度 <3.0.0>
+ * @param {Length} $height 高度 <3.0.0>
+ */
+.yo-btn {
+  display: inline-block;
+  padding: 0 1.2em;
+  vertical-align: top;
+  position: relative;
+  border-radius: 0.05rem;
+  border: 0 none;
+  background-color: #ff801a;
+  color: #fff;
+  text-align: center;
+  cursor: pointer; }
+  .yo-btn::after {
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    content: " ";
+    border-color: #d36105;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; }
+    @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+      .yo-btn::after {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.05rem; } }
+    @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+      .yo-btn::after {
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        border-radius: 0.1rem; } }
+    @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+      .yo-btn::after {
+        width: 300%;
+        height: 300%;
+        -webkit-transform: scale(0.33333);
+        transform: scale(0.33333);
+        border-radius: 0.15rem; } }
+  .yo-btn-disabled {
+    opacity: 1;
+    cursor: not-allowed; }
+    .yo-btn-disabled, .yo-btn-disabled:active {
+      background-color: #ffaa67;
+      color: white; }
+      .yo-btn-disabled::after, .yo-btn-disabled:active::after {
+        border-color: #fa7f1c; }
+  .yo-btn-s {
+    height: 0.28rem;
+    line-height: 0.28rem;
+    font-size: 0.12rem; }
+  .yo-btn-m {
+    height: 0.36rem;
+    line-height: 0.36rem;
+    font-size: 0.14rem; }
+  .yo-btn-l {
+    height: 0.44rem;
+    line-height: 0.44rem;
+    font-size: 0.16rem; }
+  .yo-btn-stacked {
+    display: block;
+    width: 100%; }
+
+/**
+ * @module fragment
+ * @method yo-search
+ * @version 3.0.0
+ * @description 构造搜索框的自定义使用方法
+ * @demo http://doyoe.github.io/Yo/demo/fragment/yo-search.html
+ * @param {String} $name 定义扩展名称 <3.0.0>
+ * @param {Length} $padding 搜索区内补白 <3.0.0>
+ * @param {Color} $bgcolor 搜索区背景色 <3.0.0>
+ * @param {Length} $font-size 搜索区字号 <3.0.0>
+ * @param {Length} $input-height 输入框高度 <3.0.0>
+ * @param {Length} $input-radius 输入框圆角半径 <3.0.0>
+ * @param {Color} $input-bgcolor 输入框背景色 <3.0.0>
+ * @param {Color} $input-color 输入框文本色 <3.0.0>
+ * @param {Color} $placeholder-color 输入框placeholder文本色 <3.0.0>
+ * @param {Color} $btn-bgcolor 搜索按钮底色 <3.0.0>
+ * @param {Color} $btn-color 搜索按钮文本色 <3.0.0>
+ * @param {Length} $cancel-width 取消按钮区域宽度 <3.0.0>
+ * @param {Color} $cancel-color 取消按钮颜色 <3.0.0>
+ */
+.yo-search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  padding: 0.07rem 0.1rem;
+  background-color: #eee;
+  line-height: 0.3rem; }
+  .yo-search > .action {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: .1px;
+    position: relative;
+    color: #bbb; }
+    .yo-search > .action > .input {
+      display: block;
+      -webkit-appearance: none;
+      appearance: none;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+      width: .1px;
+      position: relative;
+      z-index: 1;
+      padding-left: .1rem;
+      border: 0 none;
+      border-radius: 0.05rem;
+      background-color: #fff;
+      color: #212121;
+      vertical-align: top; }
+      .yo-search > .action > .input::-webkit-input-placeholder {
+        color: #bbb; }
+      .yo-search > .action > .input-shrink {
+        -webkit-transition: margin 0.2s ease-out;
+        transition: margin 0.2s ease-out; }
+        .yo-search > .action > .input-shrink:focus {
+          margin-right: 0.5rem; }
+    .yo-search > .action > .yo-ico {
+      position: absolute;
+      z-index: 2;
+      width: .28rem;
+      text-align: center; }
+    .yo-search > .action > .yo-ico + .input {
+      padding-left: .28rem; }
+  .yo-search > .cancel {
+    position: absolute;
+    right: 0;
+    width: 0.6rem;
+    color: #00afc7;
+    text-align: center; }
+  .yo-search .yo-btn {
+    padding: 0 0.1rem;
+    background-color: #1ba9ba;
+    display: block;
+    min-width: .4rem;
+    margin-left: .1rem; }
+    .yo-search .yo-btn::after {
+      border-width: 0; }
+    .yo-search .yo-btn.yo-btn-disabled, .yo-search .yo-btn.yo-btn-disabled:active {
+      background-color: #3ed1e3; }
+
+.myHero {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: #fff; }
+  .myHero .searchBox {
+    z-index: 999; }
+    .myHero .searchBox div form {
+      background: #fff; }
+      .myHero .searchBox div form label {
+        width: 100%;
+        border: 1px solid #E1E1E1;
+        border-radius: .04rem; }
+        .myHero .searchBox div form label span {
+          width: 10%; }
+        .myHero .searchBox div form label input {
+          width: 93%;
+          border: none; }
+  .myHero .assets {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    background: #4487C2;
+    padding: .04rem 0 .1rem .12rem; }
+    .myHero .assets span {
+      font-size: .1rem;
+      color: #fff; }
+  .myHero .attention {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: .04rem 0 .1rem .02rem; }
+    .myHero .attention span {
+      font-size: .1rem;
+      color: #BCBCBC; }
+      .myHero .attention span .lolColor {
+        color: #D1AE6A; }
+  .myHero #wrapper {
+    height: 100%;
+    overflow: hidden; }
+    .myHero #wrapper .myHeroList {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      width: 100%;
+      padding: 0 .12rem; }
+      .myHero #wrapper .myHeroList li {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        border-bottom: .01rem solid #E1E1E1;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        padding: .08rem 0; }
+        .myHero #wrapper .myHeroList li img {
+          height: .44rem;
+          margin-right: .2rem; }
+        .myHero #wrapper .myHeroList li div {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          flex-direction: column; }
+          .myHero #wrapper .myHeroList li div .nick {
+            font-weight: bold;
+            font-size: .12rem;
+            padding-right: .06rem; }
+          .myHero #wrapper .myHeroList li div .name, .myHero #wrapper .myHeroList li div useOcscasionCN, .myHero #wrapper .myHeroList li div winCN {
+            font-size: .10rem;
+            color: #BCBCBC;
+            padding-right: .06rem; }
+          .myHero #wrapper .myHeroList li div .useOcscasionCN {
+            font-size: .10rem;
+            color: #BCBCBC;
+            padding-right: .06rem; }
+          .myHero #wrapper .myHeroList li div .winCN {
+            font-size: .10rem;
+            color: #BCBCBC;
+            padding-right: .06rem; }
+          .myHero #wrapper .myHeroList li div .useCount {
+            font-size: .10rem;
+            color: #4487C2;
+            padding-right: .06rem; }
+          .myHero #wrapper .myHeroList li div .winPercent {
+            font-size: .10rem;
+            color: #4487C2;
+            padding-right: .06rem; }
+          .myHero #wrapper .myHeroList li div .infoMain {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+            flex-direction: row; }
+          .myHero #wrapper .myHeroList li div .infoIntro {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+            flex-direction: row; }
+
 /*# sourceMappingURL=bundle.css.map*/

@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import "../../../lib/fragment/yo-search.scss";
+// 调用本文件时载入search基础构造
+.myHero{
+	@include flexbox();
+	@include flex-direction(column);
+	height: 100%;
+	width: 100%;
+	background: #fff;
+	.searchBox{
+		z-index: 999;
+		div{
+			form{
+				background: #fff;
+			  label{
+			  		width:100%;
+			  		border: 1px solid #E1E1E1;
+			  		border-radius: .04rem;
+			  	span{
+			  		width:10%;
+			  	}
+			  	input{
+			  		width:93%;
+			  		border: none;
+			  	}
+			  }
+			}
+		}
+	}
+	.assets{
+		@include flexbox();
+		@include flex-direction(column);
+		background: #4487C2;
+		padding: .04rem 0 .1rem .12rem;
+		span{
+			font-size: .1rem;
+			color: #fff;
+		}
+	}
+	.attention{
+		@include flexbox();
+		@include flex-direction(column);
+		padding: .04rem 0 .1rem .02rem;
+		span{
+			font-size: .1rem;
+			color: #BCBCBC;
+			.lolColor{
+				color: #D1AE6A;
+			}
+		}
+	}
+	#wrapper{
+		height:100%;
+		overflow: hidden;
+		.myHeroList{
+			@include flexbox();
+			@include flex-direction(column);
+	        width: 100%;
+	        padding: 0 .12rem;
+			li{
+	            @include flexbox();
+	            border-bottom: .01rem solid #E1E1E1;
+	            @include align-items(center);
+	            padding: .08rem 0;
+				img{
+					height: .44rem;
+					margin-right: .2rem;
+				}
+				div{
+					@include flexbox();
+					@include flex-direction(column);
+					.nick{
+						font-weight: bold;
+						font-size: .12rem;
+						padding-right: .06rem;
+					}
+					.name,useOcscasionCN,winCN{
+						font-size: .10rem;
+						color: #BCBCBC;
+						padding-right: .06rem;
+					}
+					.useOcscasionCN{
+						font-size: .10rem;
+						color: #BCBCBC;
+						padding-right: .06rem;
+					}
+					.winCN{
+						font-size: .10rem;
+						color: #BCBCBC;
+						padding-right: .06rem;
+					}
+					.useCount{
+						font-size: .10rem;
+						color: #4487C2;
+						padding-right: .06rem;
+					}
+					.winPercent{
+						font-size: .10rem;
+						color: #4487C2;
+						padding-right: .06rem;
+					}
+
+					.infoMain{
+						@include flexbox();
+						@include flex-direction(row);
+					}
+					.infoIntro{
+						@include flexbox();
+						@include flex-direction(row);
+					}
+				}
+			}
+		}
+	}
+}
