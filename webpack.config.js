@@ -24,7 +24,7 @@ module.exports = {
             pathRewrite:{
                 '^/rest':''   //以rest开头的替换为空 /rest/list->localhost:8888/list
             }
-            }    //前面以/rest/开头的所有都使用代理转发
+		}    //前面以/rest/开头的所有都使用代理转发
     } 
     },
     module: {
