@@ -3,6 +3,8 @@
     width: 100%;
     @include flexbox();
     @include flex-direction(column);
+    position: relative;
+    z-index: 9999;
     .header {
         height: 44px;
         width: 100%;
@@ -77,6 +79,7 @@
                 z-index: 1;
                 @include flexbox();
                 @include flex-direction(column);
+                
                 >span{
                     width: 100%;
                     padding: 0 3px;
@@ -121,6 +124,7 @@
     .comment-scroll {
         @include flex();
         width: 100%;
+        background: #ebebeb;
         overflow: hidden;
         ul {
             li {

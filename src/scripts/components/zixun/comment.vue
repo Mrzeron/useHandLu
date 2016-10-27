@@ -86,14 +86,17 @@ export default {
 	},
 	ready: function() {
 		that = this;
-		// Vue.http.get('http://127.0.0.1/mock/comment.json')
-		Vue.http.get('/commen.php')
+		 Vue.http.get('/qtqq/comment')
+//		Vue.http.get('/commen.php')
         .then((res) => {
 			console.log(res );
 		
-			var str = res.body;
-        	str = str.substring(0,str.indexOf('<script'));
-			this.comment  =  JSON.parse( str);
+//			var str = res.body;
+//      	str = str.substring(0,str.indexOf('<script'));
+//			this.comment  =  JSON.parse( str);
+			
+			this.comment  =  res.body;
+			
 			for(var i=0; i <this.comment.length; i++){
 				this.$set( 'comment['+i+'].iszan', false);
 			}

@@ -70,7 +70,7 @@
 
 </template>
 <script>
-import {changeIndex} from "../vuex/actions.js";
+//import {changeIndex} from "../vuex/actions.js";
 var mySwiper=null;
 	export default {
 		data(){

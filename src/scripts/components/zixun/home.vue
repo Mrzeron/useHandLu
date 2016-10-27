@@ -4,6 +4,7 @@
 		
 		height: 100%;
 		width: 100%;
+
 		
 		#zixun-scroll{
 			height: 100%;
@@ -40,7 +41,7 @@
 			position: absolute;
 			background: none;
 			top:0;
-			z-index: 99999;
+			z-index: 99;
 			background-position: center bottom;  
 			background-size: 100%; 
 		}
@@ -79,6 +80,8 @@
 					padding-top: 0px;
 				    text-align: center;
    					line-height: 24px;
+   					position: relative;
+    				left: -10px;
 					img{
 						margin:0 audio;
 						height: 14px;
@@ -269,8 +272,8 @@ var headerHeight = window.innerWidth / 2 - 60;
 
 
 var listurl = '/get.php?url=http://qt.qq.com/php_cgi/news/php/varcache_getnews.php&id=12&page=0&plat=android&version=9709';
-var bannerurl = '/get.php?url=http://qt.qq.com/static/pages/news/phone/c13_list_1.shtml?plat=android&version=9709';
-
+//var bannerurl = '/get.php?url=http://qt.qq.com/static/pages/news/phone/c13_list_1.shtml?plat=android&version=9709';
+var bannerurl ='/qtqq/zixun-banner';
 
 export default {
 	
@@ -304,7 +307,7 @@ export default {
       that = this;
       // console.log(Math);
       getJson(bannerurl, (res) => {
-      		// console.log(res );
+        		 console.log(res );
       		that.banner = res.list;
 
 			setTimeout( ()=>{
@@ -482,10 +485,11 @@ export default {
 
 function listUrl( index, isPullDown ){
 	if( isPullDown ){
-		return '/get.php?url=http://qt.qq.com/php_cgi/news/php/varcache_getnews.php&id='+ that.nav[index].id+'&page=0&plat=android&version=9709';
+		return  '/qtqq/zixun-list';
+		//return '/get.php?url=http://qt.qq.com/php_cgi/news/php/varcache_getnews.php&id='+ that.nav[index].id+'&page=0&plat=android&version=9709';
 	} else{
-
-		return '/get.php?url=http://qt.qq.com/php_cgi/news/php/varcache_getnews.php&id='+ that.nav[index].id+'&page='+(that.nav[index].page++)+'&plat=android&version=9709';
+		return  '/qtqq/zixun-list';
+		//return '/get.php?url=http://qt.qq.com/php_cgi/news/php/varcache_getnews.php&id='+ that.nav[index].id+'&page='+(that.nav[index].page++)+'&plat=android&version=9709';
 	}
 	
 }
@@ -494,13 +498,13 @@ function getJson(url , succer){
 	Vue.http.get(url)
         .then((res) => {
 
-        	var str = res.data;
-        	str = str.substring(0,str.indexOf('<script'));
+//      	var str = res.data;
+//      	str = str.substring(0,str.indexOf('<script'));
+			console.log( res);
 
+			succer( res.body ) ;
+//      	succer( JSON.parse( str ) ) ;
 
-        	succer( JSON.parse( str ) ) ;
-        	// console.log( JSON.parse(res) ) ;
-        	// succer(  JSON.parse(res.data)  );
         })
 }
 </script>

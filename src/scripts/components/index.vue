@@ -1,7 +1,4 @@
 <template>
-<<<<<<< HEAD
-<router-view></router-view>
-=======
 <div class="index-container"><div class="swiper-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide left" >
@@ -16,9 +13,9 @@
     </div>
     <div class="swiper-slide right" @click="hideMsg">
     
-	
-
-				  <router-view></router-view>
+    	<!-- 路由页面 -->
+		<router-view></router-view>
+		
 		<header><img src="http://offtkz7wd.bkt.clouddn.com/img/logo.jpg" @click.stop="showMsg"></header>
     	<nav>
     		<ul>
@@ -36,7 +33,6 @@
 </div>
 
 
->>>>>>> master
 
 
 </template>

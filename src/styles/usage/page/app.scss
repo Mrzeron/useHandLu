@@ -1,21 +1,15 @@
 @charset "utf-8";
 @import "../core/reset";
 /* 必需 */
-
 @import "../module/welcome.scss";
 @import "../module/signin.scss";
-<<<<<<< HEAD
-
 
 /*  yjp */
 @import "../page/yo-mask.scss";
 @import "../module/comment.scss";
 @import "../module/zixuncontent.scss";
 
-#app{
-	height:100%;
-}
-=======
+/*  friend   */
 @import "../module/index.scss";
 @import "../module/friend.scss";
 
@@ -28,4 +22,6 @@
 .expand-leave{
 	transform: translate(-100%,0);	
 }
->>>>>>> master
+#app{
+    height: 100%;
+}

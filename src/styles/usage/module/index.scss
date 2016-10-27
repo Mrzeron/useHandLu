@@ -2,7 +2,7 @@
     height: 100%;
     width: 100%;
     position: relative;
-    .swiper-container {
+    >.swiper-container {
         height: 100%;
         width: 100%;
         >.swiper-wrapper {
@@ -20,7 +20,7 @@
             }
             .left{
             	position: relative;
-            	header{
+            	>header{
             		padding-top: 20px;
             		padding-right: 15px;
             		padding-left: 15px;
@@ -73,13 +73,13 @@
             	}
             }
             .right{
-            	header{
+            	>header{
             		width: 100%;
             		position: absolute;
                     width:39px;
             		top: 5px;
-            		padding-left: 20px;
-            		height: 44px;
+            		padding-left: 15px;
+            		height: 36px;
             		padding-top: 5px;
                     z-index:100;
             		img{

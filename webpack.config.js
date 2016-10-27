@@ -18,27 +18,23 @@ module.exports = {
         contentBase: __dirname + '/prd',
         port: 80,
         inline: true,
-<<<<<<< HEAD
         proxy: {
         	'/qtqq/*':{
-        		target:'http://127.0.0.1:3000/',
+//      		target:'http://127.0.0.1:3000/',
+				target:'http://localhost:2333/',
         		secure: true,
         		pathRewrite: {
         			'^/qtqq/':''
         		}
-        	}
-        }
-=======
-        proxy:{
-        '/rest/*':{
-            target: 'http://localhost:2333',
-            secure:false,
-            pathRewrite:{
-                '^/rest':''   //以rest开头的替换为空 /rest/list->localhost:8888/list
-            }
-		}    //前面以/rest/开头的所有都使用代理转发
+        	},
+	        '/rest/*':{
+	            target: 'http://localhost:2333',
+	            secure:false,
+	            pathRewrite:{
+	                '^/rest':''   //以rest开头的替换为空 /rest/list->localhost:8888/list
+	            }
+			}    //前面以/rest/开头的所有都使用代理转发
     } 
->>>>>>> master
     },
     module: {
         loaders: [{
@@ -59,12 +55,8 @@ module.exports = {
     },
     vue:{
 		loaders:{
-<<<<<<< HEAD
 			js:'babel',
 			css: ET.extract('vue-style-loader','css!sass')
-=======
-			js:'babel'
->>>>>>> master
 		}
 	},
     plugins: [
