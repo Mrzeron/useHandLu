@@ -1,7 +1,14 @@
 <template>
 	<div class="myHero">
 		<div class="searchBox">
-			<vue-search-box></vue-search-box>
+			<div>
+				<form class="yo-search">
+					<label class="operation">
+					    <span class="yo-ico">&#xf067;</span>
+					    <input type="text" class="input" placeholder="输入搜索关键字..." v-model='searchText' />
+					</label>
+				</form>
+			</div>
 		</div>
 		<div class="assets">
 			<span>英雄资产(黑色玫瑰)</span>
@@ -9,7 +16,7 @@
 		</div>
 		<div id="wrapper">
 			<ul class="myHeroList">
-				<li v-for="myHero in myHeroData">
+				<li v-for="myHero in myHeroData | filterBy searchText">
 				    <img v-bind:src="myHero.img">
 				    <div>
 					    <div class="infoMain">
@@ -41,12 +48,13 @@
 	export default {
 		data(){
 			return {
-				myHeroData:[]
+				myHeroData:[],
+				searchText:''
 			}
 		},
 		ready:function(){
 			this.$http.get('/mock/search/myHero.json').then((res)=>{
-				console.log(res.body);
+				//console.log(res.body);
 				this.myHeroData = res.body;
 				setTimeout(() => {
 						myScroll.refresh();
@@ -60,6 +68,7 @@
 				mouseWheel: true,
 	        	scrollbars: false
 			});
+			console.log(this.searchText);
 		}
 	}
 </script>

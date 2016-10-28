@@ -986,7 +986,7 @@ a {
   background-color: rgba(0, 0, 0, 0.2); }
 
 .yo-dialog-a {
-  left: 50%;
+  left: 100%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -3543,7 +3543,7 @@ a {
         z-index: 100; }
         .index-container > .swiper-container > .swiper-wrapper .right > header img {
           border-radius: 50%;
-          height: 100%; }
+          height: 80%; }
       .index-container > .swiper-container > .swiper-wrapper .right nav {
         position: absolute;
         bottom: 0;

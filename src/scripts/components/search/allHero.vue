@@ -1,11 +1,18 @@
 <template>
 	<div class="allHero">
 		<div class="searchBox">
-			<vue-search-box></vue-search-box>
+			<div>
+				<form class="yo-search">
+					<label class="operation">
+					    <span class="yo-ico">&#xf067;</span>
+					    <input type="text" class="input" placeholder="输入搜索关键字..." v-model='searchText' />
+					</label>
+				</form>
+			</div>
 		</div>
 		<div id="wrapper">
 			<ul class="allHeroList">
-				<li v-for="hero in heroData">
+				<li v-for="hero in heroData | filterBy searchText">
 				    <img v-bind:src="heroImg[hero.id]">
 				    <div>
 						<span class="name">{{hero.name}}</span>
@@ -26,7 +33,8 @@
 		data(){
 			return {
 				heroData:[],
-				heroImg:[]
+				heroImg:[],
+				earchText:''
 			}
 		},
 		ready:function(){
