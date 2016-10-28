@@ -660,11 +660,7 @@ a {
     height: 100%; }
 
 .sigin-container {
-<<<<<<< HEAD
-  color: orange;
-=======
   color: #CDB384;
->>>>>>> master
   width: 100%;
   height: 100%; }
   .sigin-container .bg {
@@ -699,11 +695,7 @@ a {
       -webkit-flex-direction: column;
       flex-direction: column; }
       .sigin-container .wrap .form input::-webkit-input-placeholder {
-<<<<<<< HEAD
-        color: orange !important;
-=======
         color: #CDB384 !important;
->>>>>>> master
         font-size: 12px !important; }
       .sigin-container .wrap .form input {
         background: transparent;
@@ -728,11 +720,7 @@ a {
           left: 0;
           overflow: hidden;
           content: " ";
-<<<<<<< HEAD
-          border-color: orange;
-=======
           border-color: #CDB384;
->>>>>>> master
           border-style: solid;
           border-width: 0 0 1px 0;
           -webkit-transform-origin: 0 0;
@@ -769,11 +757,7 @@ a {
           left: 0;
           overflow: hidden;
           content: " ";
-<<<<<<< HEAD
-          border-color: orange;
-=======
           border-color: #CDB384;
->>>>>>> master
           border-style: solid;
           border-width: 3px 3px 0 3px;
           -webkit-transform-origin: 0 0;
@@ -795,12 +779,401 @@ a {
               -webkit-transform: scale(0.33333);
               transform: scale(0.33333); } }
 
-<<<<<<< HEAD
 .my-container {
   width: 100%;
   height: 100%;
   background: #2F4F4F;
-=======
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+  .my-container .top {
+    width: 100%;
+    background: url("http://ofltwdk94.bkt.clouddn.com/bg.jpg") no-repeat;
+    background-size: cover;
+    color: #CDB38B; }
+    .my-container .top header {
+      width: 100%;
+      padding: 0 6px;
+      height: 44px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center; }
+      .my-container .top header .userimg {
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+        border-radius: 50%; }
+        .my-container .top header .userimg img {
+          width: 100%;
+          height: 100%; }
+      .my-container .top header .title {
+        color: #CDB38B;
+        font-size: 16px; }
+        .my-container .top header .title i {
+          display: inline-block;
+          line-height: 24px;
+          width: 16px;
+          height: 16px; }
+          .my-container .top header .title i img {
+            display: block;
+            width: 100%;
+            height: 100%; }
+      .my-container .top header .share {
+        width: 20px;
+        height: 20px; }
+        .my-container .top header .share img {
+          width: 100%;
+          height: 100%; }
+    .my-container .top .banner {
+      width: 100%;
+      height: 120px;
+      font-size: 12px;
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center; }
+      .my-container .top .banner .tip {
+        width: 50px;
+        height: 26px;
+        background-size: cover;
+        background: url("http://ofltwdk94.bkt.clouddn.com/tip.png") no-repeat;
+        position: absolute;
+        top: 20px;
+        left: 100px; }
+      .my-container .top .banner .info {
+        width: 130px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        .my-container .top .banner .info .touxiang {
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          border: 1px solid #CDB38B;
+          position: relative;
+          z-index: 1; }
+          .my-container .top .banner .info .touxiang img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; }
+          .my-container .top .banner .info .touxiang span {
+            position: absolute;
+            top: 26px;
+            left: 34px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 1px solid #CDB38B;
+            text-align: center;
+            line-height: 18px;
+            font-size: 12px;
+            z-index: 2; }
+        .my-container .top .banner .info .name {
+          padding-top: 8px; }
+          .my-container .top .banner .info .name img {
+            width: 16px;
+            height: 16px; }
+        .my-container .top .banner .info .status {
+          padding-top: 8px; }
+          .my-container .top .banner .info .status .now {
+            color: #fff; }
+          .my-container .top .banner .info .status span {
+            padding: 0 2px; }
+  .my-container nav {
+    width: 100%;
+    background: #eee;
+    color: #000;
+    font-size: 14px; }
+    .my-container nav ul {
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      background: #eee; }
+      .my-container nav ul li {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        width: .1px;
+        text-align: center;
+        line-height: 30px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        .my-container nav ul li.active {
+          color: #CDB38B; }
+        .my-container nav ul li span {
+          width: 100%;
+          height: 80%; }
+        .my-container nav ul li img {
+          width: 25%;
+          height: 20%; }
+  .my-container section {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: .1px;
+    width: 100%;
+    background: #eee;
+    overflow: hidden; }
+    .my-container section .swiper-container {
+      width: 100%;
+      height: 100%; }
+      .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column; }
+        .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor {
+          padding: 6px;
+          width: 100%;
+          background: #fff; }
+          .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex; }
+            .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -webkit-flex-direction: column;
+              flex-direction: column;
+              -webkit-box-pack: justify;
+              -webkit-justify-content: space-between;
+              justify-content: space-between;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              align-items: center;
+              width: 30%;
+              position: relative; }
+              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft::after {
+                pointer-events: none;
+                position: absolute;
+                z-index: 999;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                content: " ";
+                border-color: #ccc;
+                border-style: solid;
+                border-width: 0 3px 0 0;
+                -webkit-transform-origin: 0 0;
+                transform-origin: 0 0; }
+                @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft::after {
+                    width: 100%;
+                    height: 100%; } }
+                @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft::after {
+                    width: 200%;
+                    height: 200%;
+                    -webkit-transform: scale(0.5);
+                    transform: scale(0.5); } }
+                @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft::after {
+                    width: 300%;
+                    height: 300%;
+                    -webkit-transform: scale(0.33333);
+                    transform: scale(0.33333); } }
+              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft img {
+                width: 76px;
+                height: 60px; }
+              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft span {
+                font-size: 12px; }
+            .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright {
+              padding: 0 6px;
+              width: 70%;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -webkit-flex-direction: column;
+              flex-direction: column;
+              -webkit-box-pack: justify;
+              -webkit-justify-content: space-between;
+              justify-content: space-between;
+              -webkit-box-align: space-around;
+              -webkit-align-items: space-around;
+              align-items: space-around; }
+              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .num {
+                width: 100%;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between; }
+                .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .num div {
+                  font-size: 12px; }
+                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .num div span {
+                    font-size: 14px;
+                    color: #CDB38B;
+                    line-height: 18px; }
+              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend {
+                width: 100%;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between; }
+                .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div {
+                  display: -webkit-box;
+                  display: -webkit-flex;
+                  display: flex;
+                  -webkit-box-orient: vertical;
+                  -webkit-box-direction: normal;
+                  -webkit-flex-direction: column;
+                  flex-direction: column;
+                  -webkit-justify-content: space-around;
+                  justify-content: space-around;
+                  -webkit-box-align: center;
+                  -webkit-align-items: center;
+                  align-items: center; }
+                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div div {
+                    width: 36px;
+                    height: 36px;
+                    position: relative;
+                    background-size: contain; }
+                    .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div div span {
+                      position: absolute;
+                      font-size: 10px;
+                      bottom: 0;
+                      line-height: 12px;
+                      color: #fff; }
+                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div .god {
+                    background-image: url("http://ofltwdk94.bkt.clouddn.com/honor_god.png"); }
+                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div .fivekill {
+                    background-image: url("http://ofltwdk94.bkt.clouddn.com/honor_god.png"); }
+                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div .fourkill {
+                    background-image: url("http://ofltwdk94.bkt.clouddn.com/honor_god.png"); }
+                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div span {
+                    font-size: 12px; }
+        .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .shadow {
+          width: 100%;
+          height: 6px;
+          background: #eee; }
+        .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          flex: 1;
+          width: .1px;
+          width: 100%;
+          background: #fff; }
+          .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .title {
+            padding: 4px; }
+            .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .title img {
+              width: 12px;
+              height: 12px; }
+          .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item {
+            width: 100%;
+            padding: 0 10px; }
+            .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .date {
+              width: 100%;
+              height: 14px;
+              text-align: center;
+              font-size: 12px;
+              line-height: 14px;
+              background: #eee; }
+            .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play {
+              width: 100%;
+              padding: 4px 0;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: flex; }
+              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play .hero {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                overflow: hidden; }
+                .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play .hero img {
+                  width: 100%;
+                  height: 100%; }
+              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play .playright {
+                padding-left: 6px;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+                width: .1px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between; }
+                .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play .playright .ptop {
+                  display: -webkit-box;
+                  display: -webkit-flex;
+                  display: flex;
+                  width: 100%;
+                  height: 16px;
+                  font-size: 12px;
+                  color: green; }
+                .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play .playright .pbottom {
+                  height: 16px;
+                  font-size: 12px;
+                  color: #333; }
+
+.go-transition {
+  transition: all .5s ease; }
+
+.go-enter {
+  transition: translate(100%, 0); }
+
+.go-leave {
+  transition: translate(-100%, 0); }
+
 /**
  * @module element
  * @method yo-btn
@@ -3031,65 +3404,12 @@ a {
 #comment {
   height: 100%;
   width: 100%;
->>>>>>> master
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-<<<<<<< HEAD
-  flex-direction: column; }
-  .my-container .top {
-    width: 100%;
-    background: url("http://ofltwdk94.bkt.clouddn.com/bg.jpg") no-repeat;
-    background-size: cover;
-    color: #CDB38B; }
-    .my-container .top header {
-      width: 100%;
-      padding: 0 6px;
-      height: 44px;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      align-items: center; }
-      .my-container .top header .userimg {
-        width: 36px;
-        height: 36px;
-        overflow: hidden;
-        border-radius: 50%; }
-        .my-container .top header .userimg img {
-          width: 100%;
-          height: 100%; }
-      .my-container .top header .title {
-        color: #CDB38B;
-        font-size: 16px; }
-        .my-container .top header .title i {
-          display: inline-block;
-          line-height: 24px;
-          width: 16px;
-          height: 16px; }
-          .my-container .top header .title i img {
-            display: block;
-            width: 100%;
-            height: 100%; }
-      .my-container .top header .share {
-        width: 20px;
-        height: 20px; }
-        .my-container .top header .share img {
-          width: 100%;
-          height: 100%; }
-    .my-container .top .banner {
-      width: 100%;
-      height: 120px;
-      font-size: 12px;
-      position: relative;
-=======
   flex-direction: column;
   position: relative;
   z-index: 9999; }
@@ -3212,117 +3532,12 @@ a {
       background: #fff;
       bottom: 0;
       z-index: 1;
->>>>>>> master
       display: -webkit-box;
       display: -webkit-flex;
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
-<<<<<<< HEAD
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      align-items: center; }
-      .my-container .top .banner .tip {
-        width: 50px;
-        height: 26px;
-        background-size: cover;
-        background: url("http://ofltwdk94.bkt.clouddn.com/tip.png") no-repeat;
-        position: absolute;
-        top: 20px;
-        left: 100px; }
-      .my-container .top .banner .info {
-        width: 130px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        align-items: center; }
-        .my-container .top .banner .info .touxiang {
-          width: 42px;
-          height: 42px;
-          border-radius: 50%;
-          border: 1px solid #CDB38B;
-          position: relative;
-          z-index: 1; }
-          .my-container .top .banner .info .touxiang img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%; }
-          .my-container .top .banner .info .touxiang span {
-            position: absolute;
-            top: 26px;
-            left: 34px;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            border: 1px solid #CDB38B;
-            text-align: center;
-            line-height: 18px;
-            font-size: 12px;
-            z-index: 2; }
-        .my-container .top .banner .info .name {
-          padding-top: 8px; }
-          .my-container .top .banner .info .name img {
-            width: 16px;
-            height: 16px; }
-        .my-container .top .banner .info .status {
-          padding-top: 8px; }
-          .my-container .top .banner .info .status .now {
-            color: #fff; }
-          .my-container .top .banner .info .status span {
-            padding: 0 2px; }
-  .my-container nav {
-    width: 100%;
-    background: #eee;
-    color: #000;
-    font-size: 14px; }
-    .my-container nav ul {
-      width: 100%;
-      height: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      background: #eee; }
-      .my-container nav ul li {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
-        width: .1px;
-        text-align: center;
-        line-height: 30px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        align-items: center; }
-        .my-container nav ul li.active {
-          color: #CDB38B; }
-        .my-container nav ul li span {
-          width: 100%;
-          height: 80%; }
-        .my-container nav ul li img {
-          width: 25%;
-          height: 20%; }
-  .my-container section {
-=======
       flex-direction: column; }
       #comment .header .comment-editor > span {
         width: 100%;
@@ -3877,55 +4092,10 @@ a {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
->>>>>>> master
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
     width: .1px;
-<<<<<<< HEAD
-    width: 100%;
-    background: #eee;
-    overflow: hidden; }
-    .my-container section .swiper-container {
-      width: 100%;
-      height: 100%; }
-      .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll {
-        width: 100%;
-        height: 100%;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        flex-direction: column; }
-        .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor {
-          padding: 6px;
-          width: 100%;
-          background: #fff; }
-          .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail {
-            width: 100%;
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: flex; }
-            .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft {
-              display: -webkit-box;
-              display: -webkit-flex;
-              display: flex;
-              -webkit-box-orient: vertical;
-              -webkit-box-direction: normal;
-              -webkit-flex-direction: column;
-              flex-direction: column;
-              -webkit-box-pack: justify;
-              -webkit-justify-content: space-between;
-              justify-content: space-between;
-              -webkit-box-align: center;
-              -webkit-align-items: center;
-              align-items: center;
-              width: 30%;
-              position: relative; }
-              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft::after {
-=======
     position: relative;
     color: #bbb; }
     .yo-search > .action > .input {
@@ -4160,7 +4330,6 @@ a {
               align-items: center;
               position: relative; }
               .friend-container .friend_body > .friend_body_swiper-container > .swiper-wrapper > .swiper-slide .zm_fri_top .zm_list li::after {
->>>>>>> master
                 pointer-events: none;
                 position: absolute;
                 z-index: 999;
@@ -4168,19 +4337,6 @@ a {
                 left: 0;
                 overflow: hidden;
                 content: " ";
-<<<<<<< HEAD
-                border-color: #ccc;
-                border-style: solid;
-                border-width: 0 3px 0 0;
-                -webkit-transform-origin: 0 0;
-                transform-origin: 0 0; }
-                @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
-                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft::after {
-                    width: 100%;
-                    height: 100%; } }
-                @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
-                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft::after {
-=======
                 border-color: #eee;
                 border-style: solid;
                 border-width: 1px 0 1px 0;
@@ -4192,177 +4348,16 @@ a {
                     height: 100%; } }
                 @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
                   .friend-container .friend_body > .friend_body_swiper-container > .swiper-wrapper > .swiper-slide .zm_fri_top .zm_list li::after {
->>>>>>> master
                     width: 200%;
                     height: 200%;
                     -webkit-transform: scale(0.5);
                     transform: scale(0.5); } }
                 @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
-<<<<<<< HEAD
-                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft::after {
-=======
                   .friend-container .friend_body > .friend_body_swiper-container > .swiper-wrapper > .swiper-slide .zm_fri_top .zm_list li::after {
->>>>>>> master
                     width: 300%;
                     height: 300%;
                     -webkit-transform: scale(0.33333);
                     transform: scale(0.33333); } }
-<<<<<<< HEAD
-              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft img {
-                width: 76px;
-                height: 60px; }
-              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dleft span {
-                font-size: 12px; }
-            .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright {
-              padding: 0 6px;
-              width: 70%;
-              display: -webkit-box;
-              display: -webkit-flex;
-              display: flex;
-              -webkit-box-orient: vertical;
-              -webkit-box-direction: normal;
-              -webkit-flex-direction: column;
-              flex-direction: column;
-              -webkit-box-pack: justify;
-              -webkit-justify-content: space-between;
-              justify-content: space-between;
-              -webkit-box-align: space-around;
-              -webkit-align-items: space-around;
-              align-items: space-around; }
-              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .num {
-                width: 100%;
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-pack: justify;
-                -webkit-justify-content: space-between;
-                justify-content: space-between; }
-                .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .num div {
-                  font-size: 12px; }
-                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .num div span {
-                    font-size: 14px;
-                    color: #CDB38B;
-                    line-height: 18px; }
-              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend {
-                width: 100%;
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-pack: justify;
-                -webkit-justify-content: space-between;
-                justify-content: space-between; }
-                .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div {
-                  display: -webkit-box;
-                  display: -webkit-flex;
-                  display: flex;
-                  -webkit-box-orient: vertical;
-                  -webkit-box-direction: normal;
-                  -webkit-flex-direction: column;
-                  flex-direction: column;
-                  -webkit-justify-content: space-around;
-                  justify-content: space-around;
-                  -webkit-box-align: center;
-                  -webkit-align-items: center;
-                  align-items: center; }
-                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div div {
-                    width: 36px;
-                    height: 36px;
-                    position: relative;
-                    background-size: contain; }
-                    .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div div span {
-                      position: absolute;
-                      font-size: 10px;
-                      bottom: 0;
-                      line-height: 12px;
-                      color: #fff; }
-                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div .god {
-                    background-image: url("http://ofltwdk94.bkt.clouddn.com/honor_god.png"); }
-                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div .fivekill {
-                    background-image: url("http://ofltwdk94.bkt.clouddn.com/honor_god.png"); }
-                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div .fourkill {
-                    background-image: url("http://ofltwdk94.bkt.clouddn.com/honor_god.png"); }
-                  .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myhonor .detail .dright .legend div span {
-                    font-size: 12px; }
-        .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .shadow {
-          width: 100%;
-          height: 6px;
-          background: #eee; }
-        .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore {
-          -webkit-box-flex: 1;
-          -webkit-flex: 1;
-          flex: 1;
-          width: .1px;
-          width: 100%;
-          background: #fff; }
-          .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .title {
-            padding: 4px; }
-            .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .title img {
-              width: 12px;
-              height: 12px; }
-          .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item {
-            width: 100%;
-            padding: 0 10px; }
-            .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .date {
-              width: 100%;
-              height: 14px;
-              text-align: center;
-              font-size: 12px;
-              line-height: 14px;
-              background: #eee; }
-            .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play {
-              width: 100%;
-              padding: 4px 0;
-              display: -webkit-box;
-              display: -webkit-flex;
-              display: flex; }
-              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play .hero {
-                width: 36px;
-                height: 36px;
-                border-radius: 50%;
-                overflow: hidden; }
-                .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play .hero img {
-                  width: 100%;
-                  height: 100%; }
-              .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play .playright {
-                padding-left: 6px;
-                -webkit-box-flex: 1;
-                -webkit-flex: 1;
-                flex: 1;
-                width: .1px;
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -webkit-flex-direction: column;
-                flex-direction: column;
-                -webkit-box-pack: justify;
-                -webkit-justify-content: space-between;
-                justify-content: space-between; }
-                .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play .playright .ptop {
-                  display: -webkit-box;
-                  display: -webkit-flex;
-                  display: flex;
-                  width: 100%;
-                  height: 16px;
-                  font-size: 12px;
-                  color: green; }
-                .my-container section .swiper-container .swiper-wrapper .swiper-slide #index-scroll .myscore .item .play .playright .pbottom {
-                  height: 16px;
-                  font-size: 12px;
-                  color: #333; }
-
-.go-transition {
-  transition: all .5s ease; }
-
-,
-.go-enter {
-  transition: translate(100%, 0); }
-
-,
-.go-leave {
-  transition: translate(-100%, 0); }
-=======
               .friend-container .friend_body > .friend_body_swiper-container > .swiper-wrapper > .swiper-slide .zm_fri_top .zm_list li img {
                 border-radius: 50%;
                 height: 100%; }
@@ -4575,6 +4570,5 @@ a {
           padding: 0 2px;
           color: #da9852;
           text-align: center; }
->>>>>>> master
 
 /*# sourceMappingURL=bundle.css.map*/

@@ -3,18 +3,20 @@
 /* 必需 */
 @import "../module/welcome.scss";
 @import "../module/signin.scss";
-<<<<<<< HEAD
+
 @import "../module/my.scss";
 
 .go-transition{
   transition: all .5s ease;
-},
+}
+
 .go-enter{
   transition: translate(100%,0);
-},
+}
 .go-leave{
   transition: translate(-100%,0);
-=======
+}
+
 @import "../module/search/search.scss";
 @import "../module/search/searchHeroTime.scss";
 @import "../module/search/heroData.scss";
@@ -37,9 +39,8 @@
 	transform: translate(100%,0);
 }
 .expand-leave{
-	transform: translate(-100%,0);	
+	transform: translate(-100%,0);
 }
 #app{
     height: 100%;
->>>>>>> master
 }

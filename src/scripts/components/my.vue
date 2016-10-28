@@ -3,7 +3,6 @@
     <div class="top">
       <header>
         <div class="userimg">
-          <img src="http://ofltwdk94.bkt.clouddn.com/userimg.jpg" />
         </div>
         <div class="title">
           <span>比尔吉沃特<span>
@@ -35,11 +34,11 @@
         </div>
       </div>
     </div>
-    <nav>
+    <div class="daohang">
       <ul id="swiper-nav">
-          <li v-for="nav in indexNav" v-on:click="switchSwiper($index)" v-bind:class="curIndex == $index ? 'active': ''"><span>{{nav}}</span><img v-if="curIndex == $index?true:false" src="/images/tab_selected.png"/></li>
+          <li v-for="nav in indexNav" v-on:click="switchSwiper($index)" v-bind:class="curIndex == $index ? 'active': ''"><span>{{nav}}</span><img v-if="curIndex == $index?true:false" src="http://ofltwdk94.bkt.clouddn.com/tab_selected.png"/></li>
       </ul>
-    </nav>
+    </div>
     <section>
       <div class="swiper-container" id="index-swiper">
         <div class="swiper-wrapper">
@@ -94,16 +93,87 @@
               </div>
             </section>
           </div>
-          <div class="swiper-slide">slider2</div>
-          <div class="swiper-slide">slider3</div>
+          <div class="swiper-slide">
+            <section id="index-scroll">
+              <div class="scrollcontainer">
+                <div class="myhonor">
+                  <div class="detail">
+                    <div class="dleft">
+                      <img src="http://ofltwdk94.bkt.clouddn.com/baijin.png" />
+                      <span>华贵铂金 III</span>
+                    </div>
+                    <div class="dright">
+                      <div class="num">
+                        <div>胜率<span>62%</span></div>
+                        <div>总局数<span>2867</span></div>
+                      </div>
+                      <div class="legend">
+                        <div>
+                          <div class="god"><span>165次</span></div>
+                          <span>超神</span>
+                        </div>
+                        <div>
+                          <div class="fivekill"><span>31次</span></div>
+                          <span>五杀</span>
+                        </div>
+                        <div>
+                          <div class="fourkill"><span>107次</span></div>
+                          <span>四杀</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="shadow"></div>
+              </div>
+            </section>
+          </div>
+          <div class="swiper-slide">
+            <section id="index-scroll">
+              <div class="scrollcontainer">
+                <div class="myhonor">
+                  <div class="detail">
+                    <div class="dleft">
+                      <img src="http://ofltwdk94.bkt.clouddn.com/baijin.png" />
+                      <span>华贵铂金 III</span>
+                    </div>
+                    <div class="dright">
+                      <div class="num">
+                        <div>胜率<span>62%</span></div>
+                        <div>总局数<span>2867</span></div>
+                      </div>
+                      <div class="legend">
+                        <div>
+                          <div class="god"><span>165次</span></div>
+                          <span>超神</span>
+                        </div>
+                        <div>
+                          <div class="fivekill"><span>31次</span></div>
+                          <span>五杀</span>
+                        </div>
+                        <div>
+                          <div class="fourkill"><span>107次</span></div>
+                          <span>四杀</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="shadow"></div>
+                
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </section>
+    <footer>
+    </footer>
   </div>
 </template>
 <script>
-  var Vue = require('../libs/vue.js');
-  var VueResource = require('../libs/vue-resource.js');
   import commonUtil from '../utils/commonUtil.js';
 
   Vue.use(VueResource);
