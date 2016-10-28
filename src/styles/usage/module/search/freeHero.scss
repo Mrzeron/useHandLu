@@ -1,0 +1,56 @@
+.freeHero{
+	@include flexbox();
+	@include flex-direction(column);
+	height: 100%;
+	width: 100%;
+	.title{
+		@include flexbox();
+		height: .24rem;
+		width: 100%;
+		padding: 8px;
+		div{
+			@include flexbox();
+			height: .24rem;
+			width: 100%;
+			background: #CECECE;
+			@include justify-content(center);
+			@include align-items(center);
+			font-size: 10px;
+			color: #fff;
+			border-radius: 3px;
+		}
+	}
+	.freeHeroList{
+		@include flexbox();
+        flex-wrap: wrap;
+        align-content: flex-start;
+        width: 100%;
+        margin: 20px 12px;
+		li{
+			width: 50%;
+            padding: 3px;
+            @include flexbox();
+            @include align-items(center);
+			img{
+				height: .44rem;
+			}
+			div{
+				margin-left: 4px;
+				@include flexbox();
+				@include flex-direction(column);
+				span{
+					font-size: .1rem;
+				}
+				.name{
+					font-weight: bold;
+				}
+				.nick{
+					color: #919191;
+				}
+				.tag{
+					color: #4B8CC4;
+				}
+			}
+		}
+	}
+}
