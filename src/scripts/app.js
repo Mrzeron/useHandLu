@@ -33,46 +33,6 @@ let App = Vue.extend({
   /*store:store*/
 });
 router.map({
-<<<<<<< HEAD
-	'/': {
-		component: welcome
-	},
-	'/signin':{
-		component:signin
-	},
-	'/index':{
-		component:index,
-		subRoutes:{
-			'/':{
-				component: zixun,
-				subRoutes : {
-					'/': {
-						component: zixunHome
-					}
-				}
-			},
-			'/zixun':{
-				component: zixun,
-				subRoutes : {
-					'/': {
-						component: zixunHome
-					},
-					'/content': {
-						component: zixuncontent
-					},
-					'/comment':{
-						component: comment
-					}
-				}
-			},
-			'/friend':{
-				component:friend
-			}
-		}
-	}
-})
-
-=======
   '/': {
     component: welcome
   },
@@ -121,18 +81,12 @@ router.map({
   '/heroData':{
     component:heroData,
   }
-})
->>>>>>> ce1966b02cfdb7a3884003d29d660b68a3684bf1
+});
 
 router.start(App, 'body')
 
 
 //2秒后自动跳转】
 setTimeout(function(){
-<<<<<<< HEAD
 	router.go({path:'/signin'});
 },2000)
-=======
-   router.go({path:'/index/zixun'});
-},2000);
->>>>>>> ce1966b02cfdb7a3884003d29d660b68a3684bf1

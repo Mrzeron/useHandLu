@@ -11,7 +11,7 @@ module.exports = {
     //配置server
     devServer: {
         contentBase: __dirname + '/prd',
-        port: 80,
+        port: 8080,
         inline: true,
         proxy: {
         	'/qtqq/*':{
