@@ -4,6 +4,25 @@
 @import "../module/welcome.scss";
 @import "../module/signin.scss";
 
+@import "../module/my.scss";
+
+.go-transition{
+  transition: all .5s ease;
+}
+
+.go-enter{
+  transition: translate(100%,0);
+}
+.go-leave{
+  transition: translate(-100%,0);
+}
+
+@import "../module/search/search.scss";
+@import "../module/search/searchHeroTime.scss";
+@import "../module/search/heroData.scss";
+@import "../module/search/freeHero.scss";
+@import "../module/search/allHero.scss";
+@import "../module/search/myHero.scss";
 /*  yjp */
 @import "../page/yo-mask.scss";
 @import "../module/comment.scss";
@@ -20,7 +39,7 @@
 	transform: translate(100%,0);
 }
 .expand-leave{
-	transform: translate(-100%,0);	
+	transform: translate(-100%,0);
 }
 #app{
     height: 100%;

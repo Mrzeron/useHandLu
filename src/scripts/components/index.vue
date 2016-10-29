@@ -11,11 +11,11 @@
 		</ul>
 		<div class="setting"><img src="http://offtkz7wd.bkt.clouddn.com/img/menu_setting.png"><span>设置</span></div>
     </div>
-    <div class="swiper-slide right" @click="hideMsg">
-    
+    <div class="swiper-slide right" @click="hideMsg" >
+
     	<!-- 路由页面 -->
 		<router-view></router-view>
-		
+
 		<header><img src="http://offtkz7wd.bkt.clouddn.com/img/logo.jpg" @click.stop="showMsg"></header>
     	<nav>
     		<ul>
@@ -27,19 +27,14 @@
     		</ul>
     	</nav>
     </div>
-    
+
   </div>
 </div>
 </div>
 
-
-
-
 </template>
 <script>
-	/*import {getIndex }from '../vuex/getters.js';
-	import  {changeIndex} from '../vuex/actions.js';*/
-var mySwiper=null;
+var main_swiper=null;
 	export default{
 		data(){
 			return {
@@ -79,53 +74,40 @@ var mySwiper=null;
 						img:"http://offtkz7wd.bkt.clouddn.com/img/tab_discovery.png",
 						cli_img:"http://offtkz7wd.bkt.clouddn.com/img/tab_discovery_checked.png",
 						title:"发现",
-							path:'/index'
+							path:'/index/search'
 					},
 					{
 						img:"http://offtkz7wd.bkt.clouddn.com/img/tab_me.png",
 						cli_img:"http://offtkz7wd.bkt.clouddn.com/img/tab_me_checked.png",
-						title:"我",
-							path:'/index'
+						title:"我的",
+							path:'/index/my'
 					}
 
 					]
 			}
-			
-			
+
+
 		},
-		/*	vuex:{
-				getters:{
-					curIndex:getIndex
-				},
-				actions:{
-					change:changeIndex
-				}
-			},*/
 		ready(){
-			 mySwiper = new Swiper('.swiper-container', {
+			 main_swiper = new Swiper('.swiper-container', {
 				slidesPerView:'auto',
 				effert:"coverflow",
-				initialSlide :2
-				
-	
-
-
-		})
-
+				initialSlide :2,
+        click:true
+			})
 		},
 		methods:{
 			showMsg(){
-				mySwiper.slideTo(0, 500, false)
+				main_swiper.slideTo(0, 500, false)
 			},
 			hideMsg(){
-				mySwiper.slideTo(1, 500, false)	
+				main_swiper.slideTo(1, 500, false)
 			},
 			change_nav(index){
 				/*this.change(index)*/
 				this.cur=index;
-				
 			}
-		}	
+		}
 	}
-	
+
 </script>

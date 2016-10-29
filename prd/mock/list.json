@@ -1,0 +1,27 @@
+[
+  {
+    "date":"10-22",
+    "detail":[
+      {"touxiang":"http://ofltwdk94.bkt.clouddn.com/Khazix.png","result":"胜利","score":"10/2/11","modal":"排位赛"},
+      {"touxiang":"http://ofltwdk94.bkt.clouddn.com/Fizz.png","result":"胜利","score":"3/1/8","modal":"排位赛"},
+      {"touxiang":"http://ofltwdk94.bkt.clouddn.com/Ashe.png","result":"胜利","score":"19/10/12","modal":"排位赛"}
+    ]
+  },
+  {
+    "date":"10-21",
+    "detail":[
+      {"touxiang":"http://ofltwdk94.bkt.clouddn.com/Khazix.png","result":"胜利","score":"10/2/11","modal":"排位赛"},
+      {"touxiang":"http://ofltwdk94.bkt.clouddn.com/Braum.png","result":"胜利","score":"10/2/11","modal":"排位赛"},
+      {"touxiang":"http://ofltwdk94.bkt.clouddn.com/Fizz.png","result":"胜利","score":"10/2/11","modal":"排位赛"}
+    ]
+  },
+  {
+    "date":"10-14",
+    "detail":[
+      {"touxiang":"http://ofltwdk94.bkt.clouddn.com/Braum.png","result":"胜利","score":"10/2/11","modal":"排位赛"},
+      {"touxiang":"http://ofltwdk94.bkt.clouddn.com/Khazix.png","result":"胜利","score":"10/2/11","modal":"排位赛"},
+      {"touxiang":"http://ofltwdk94.bkt.clouddn.com/Fizz.png","result":"胜利","score":"10/2/11","modal":"排位赛"},
+      {"touxiang":"http://ofltwdk94.bkt.clouddn.com/Ashe.png","result":"胜利","score":"10/2/11","modal":"排位赛"}
+    ]
+  }
+]

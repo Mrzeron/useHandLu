@@ -1,0 +1,321 @@
+.my-container{
+  width: 100%;
+  height: 100%;
+  background: #2F4F4F;
+  @include flexbox();
+  @include flex-direction(column);
+  .top{
+    width:100%;
+    background: url('http://ofltwdk94.bkt.clouddn.com/bg.jpg') no-repeat;
+    background-size:cover;
+    color: #CDB38B;
+    header{
+      width: 100%;
+      padding: 0 6px;
+      height: 44px;
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+      .userimg{
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+        border-radius: 50%;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .title{
+        color: #CDB38B;
+        font-size: 16px;
+        i{
+          display: inline-block;
+          line-height: 24px;
+          width: 16px;
+          height: 16px;
+          img{
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .share{
+        width: 20px;
+        height: 20px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .banner{
+      width: 100%;
+      height: 120px;
+      font-size: 12px;
+      position:relative;
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+      .tip{
+        width: 50px;
+        height: 26px;
+        background-size:cover;
+        background:url('http://ofltwdk94.bkt.clouddn.com/tip.png') no-repeat;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+      }
+      .info{
+        width: 130px;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        .touxiang{
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          border:1px solid #CDB38B;
+          position: relative;
+          z-index: 1;
+          img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+          span{
+            position: absolute;
+            top: 26px;
+            left: 34px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border:1px solid #CDB38B;
+            text-align: center;
+            line-height: 18px;
+            font-size: 12px;
+            z-index: 2;
+          }
+        }
+        .name{
+          padding-top: 8px;
+          img{
+            width: 16px;
+            height: 16px;
+          }
+        }
+        .status{
+          padding-top: 8px;
+          .now{
+            color: #fff;
+          }
+          span{
+            padding:0 2px;
+          }
+        }
+      }
+    }
+  }
+  div.daohang{
+    width: 100%;
+    background: #eee;
+    color: #000;
+    font-size: 14px;
+    ul{
+      width: 100%;
+      height: 100%;
+      @include flexbox();
+      background: #eee;
+      li {
+          @include flex(1);
+          text-align: center;
+          line-height: 30px;
+          @include flexbox();
+          @include flex-direction(column);
+          @include align-items(center);
+          &.active {
+              color: #CDB38B;
+          }
+          span{
+            width: 100%;
+            height: 80%;
+          }
+          img{
+            width: 25%;
+            height: 20%;
+          }
+      }
+    }
+  }
+  section{
+    @include flex(1);
+    width: 100%;
+    background: #eee;
+    overflow: hidden;
+    .swiper-container{
+      width: 100%;
+      height: 100%;
+      .swiper-wrapper{
+        .swiper-slide{
+          #index-scroll{
+            width: 100%;
+            height: 100%;
+            @include flexbox();
+            @include flex-direction(column);
+            .myhonor{
+              padding: 6px;
+              width: 100%;
+              background:#fff;
+              .detail{
+                width: 100%;
+                @include flexbox();
+                .dleft{
+                  @include flexbox();
+                  @include flex-direction(column);
+                  @include justify-content(space-between);
+                  @include align-items(center);
+                  width:30%;
+                  @include border(0 3px 0 0);
+                  img{
+                    width: 76px;
+                    height: 60px;
+                  }
+                  span{
+                    font-size: 12px;
+                  }
+                }
+                .dright{
+                  padding: 0 6px;
+                  width: 70%;
+                  @include flexbox();
+                  @include flex-direction(column);
+                  @include justify-content(space-between);
+                  @include align-items(space-around);
+                  .num{
+                    width: 100%;
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    div{
+                      font-size: 12px;
+                      span{
+                        font-size: 14px;
+                        color: #CDB38B;
+                        line-height: 18px;
+                      }
+                    }
+                  }
+                  .legend{
+                    width: 100%;
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    div{
+                      @include flexbox();
+                      @include flex-direction(column);
+                      @include justify-content(space-around);
+                      @include align-items(center);
+                      div{
+                        width: 36px;
+                        height: 36px;
+                        position: relative;
+                        background-size:contain;
+                        span{
+                          position: absolute;
+                          font-size: 10px;
+                          bottom: 0;
+                          line-height: 12px;
+                          color: #fff;
+                        }
+                      }
+                      .god{
+                        background-image:url('http://ofltwdk94.bkt.clouddn.com/honor_god.png');
+                      }
+                      .fivekill{
+                        background-image:url('http://ofltwdk94.bkt.clouddn.com/honor_god.png');
+                      }
+                      .fourkill{
+                        background-image:url('http://ofltwdk94.bkt.clouddn.com/honor_god.png');
+                      }
+                      span{
+                        font-size: 12px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .shadow{
+              width: 100%;
+              height: 6px;
+              background: #eee;
+            }
+            .myscore{
+              @include flex(1);
+              width:100%;
+              background: #fff;
+              .title{
+                padding: 4px;
+                img{
+                  width: 12px;
+                  height: 12px;
+                }
+              }
+              .item{
+                width: 100%;
+                padding: 0 10px;
+                .date{
+                  width: 100%;
+                  height: 14px;
+                  text-align: center;
+                  font-size: 12px;
+                  line-height: 14px;
+                  background: #eee;
+                }
+                .play{
+                  width: 100%;
+                  padding: 4px 0;
+                  @include flexbox();
+                  .hero{
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img{
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                  .playright{
+                    padding-left: 6px;
+                    @include flex(1);
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include justify-content(space-between);
+                    .ptop{
+                      @include flexbox();
+                      width: 100%;
+                      height: 16px;
+                      font-size: 12px;
+                      color: green;
+                    }
+                    .pbottom{
+                      height: 16px;
+                      font-size: 12px;
+                      color: #333;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer{
+    width: 100%;
+    height: 50px;
+  }
+}

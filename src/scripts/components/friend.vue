@@ -54,23 +54,17 @@
 							</li>
 						</ul>
 					</div>
-					
-
 			    </div>
 			    <div class="swiper-slide fri_msg"> 
 			    	<div v-show="fri_msg==0" class="msgs">暂无消息</div>
-			    </div>
-			    
+			    </div>			    
 			  </div>
 			</div>
 		</div>
 	<div>
-
 </div>
-
 </template>
 <script>
-//import {changeIndex} from "../vuex/actions.js";
 var mySwiper=null;
 	export default {
 		data(){
@@ -91,22 +85,12 @@ var mySwiper=null;
 					img:"http://offtkz7wd.bkt.clouddn.com/img/subscribe_friend.png",
 					title:"好友订阅"
 				}],
-				fri_list:[]
-				,
-
+				fri_list:[],
 				menu_show:false,
 				zm_listShow:false
-
 			}
 		},
-	/*	vuex:{
-		actions:{
-			change:changeIndex
-		}
-			}
-		,*/
 		ready(){
-			/*this.change(1);*/
 			var that=this;
 			mySwiper = new Swiper('.friend_body_swiper-container', {
 			onSlideChangeEnd(swiper){
@@ -115,7 +99,6 @@ var mySwiper=null;
 	
 			})
 			console.log("DOMReady");
-
 				  this.$http.get('/rest/fri_msg').then((res) => {
 				    
 				    this.fri_list=res.data;

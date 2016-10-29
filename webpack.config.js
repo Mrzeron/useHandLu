@@ -7,13 +7,8 @@ module.exports = {
         filename: 'bundle.js'
         // filename: '[name].js'
     },
-    devtool: 'source-map', //配置source-map   
+    devtool: 'source-map', //配置source-map
     //配置server
-    /*  devServer: {
-          contentBast: __dirname +'/prd',
-          port: 80,
-          inline: true
-      },*/
     devServer: {
         contentBase: __dirname + '/prd',
         port: 80,
