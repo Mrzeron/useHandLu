@@ -179,9 +179,11 @@
 				}else if(article_id==3625){
 					console.log(article_id);
 					router.go({path:'/searchHeroTime?headTitle='+title+'&idFlag=siteid&id=187674040&c=index&url=http://wsq.discuz.qq.com/?siteid=187674040&c=index&f=inner&a=index&sid=$VKEY$'});
-				}else{
+				}else if(article_id==5985){
 					console.log(article_id);
 					router.go({path:'/searchHeroTime?headTitle='+title+'&url='+article_url});
+				}else{
+					router.go({path:'/searchHeroTime?headTitle='+title+'&url=http://lol.qq.com/act/a20161020teemo/click.html'});
 				}
 			},
 			download(){
