@@ -33,44 +33,43 @@ let App = Vue.extend({
   /*store:store*/
 });
 router.map({
-        '/': {
-            component: welcome
-        },
-       	'/signin':{
-       		component:signin
-       	},
-       	'/index':{
-       		component:index,
-       		subRoutes:{
-       			'/':{
-       				component: zixun,
-       				subRoutes : {
-                      '/': {
-                            component: zixunHome
-                      }
-                    }
-       			},
-       			'/zixun':{
-    					    component: zixun,
-                  subRoutes : {
-                      '/': {
-                            component: zixunHome
-                      },
-                      '/content': {
-                           component: zixuncontent
-                      },
-					  '/comment':{
-						  component: comment
-					  }
-                  }
-    			},
-    			'/friend':{
-			          component:friend
-			    }
-       		}
-       	}
-
-    })
+	'/': {
+		component: welcome
+	},
+	'/signin':{
+		component:signin
+	},
+	'/index':{
+		component:index,
+		subRoutes:{
+			'/':{
+				component: zixun,
+				subRoutes : {
+					'/': {
+						component: zixunHome
+					}
+				}
+			},
+			'/zixun':{
+				component: zixun,
+				subRoutes : {
+					'/': {
+						component: zixunHome
+					},
+					'/content': {
+						component: zixuncontent
+					},
+					'/comment':{
+						component: comment
+					}
+				}
+			},
+			'/friend':{
+				component:friend
+			}
+		}
+	}
+})
 
 
 router.start(App, 'body') 
@@ -78,5 +77,5 @@ router.start(App, 'body')
 
 //2秒后自动跳转
 setTimeout(function(){
-	// router.go({path:'/index/zixun'});
-},1000)
+	router.go({path:'/signin'});
+},2000)

@@ -95,8 +95,6 @@
 	Vue.use(VueRouter);*/
 	
 	
-	//import store from './vuex/store.js';
-	
 	/* yjp  */
 	
 	
@@ -108,45 +106,52 @@
 	
 	var router = new VueRouter();
 	var App = Vue.extend({
-	    /*store:store*/
+		/*store:store*/
 	});
 	router.map({
-	    '/': {
-	        component: _welcome2.default
-	    },
-	    '/signin': {
-	        component: _signin2.default
-	    },
-	    '/index': {
-	        component: _index2.default,
-	        subRoutes: {
-	            '/zixun': {
-	                component: _zixunhome2.default,
-	                subRoutes: {
-	                    '/': {
-	                        component: _home2.default
-	                    },
-	                    '/friend': {
-	                        component: _friend2.default
-	                    },
-	                    '/content': {
-	                        component: _zixuncontent2.default
-	                    },
-	                    '/comment': {
-	                        component: _comment2.default
-	                    }
-	                }
-	            }
-	        }
-	    }
-	
+		'/': {
+			component: _welcome2.default
+		},
+		'/signin': {
+			component: _signin2.default
+		},
+		'/index': {
+			component: _index2.default,
+			subRoutes: {
+				'/': {
+					component: _zixunhome2.default,
+					subRoutes: {
+						'/': {
+							component: _home2.default
+						}
+					}
+				},
+				'/zixun': {
+					component: _zixunhome2.default,
+					subRoutes: {
+						'/': {
+							component: _home2.default
+						},
+						'/content': {
+							component: _zixuncontent2.default
+						},
+						'/comment': {
+							component: _comment2.default
+						}
+					}
+				},
+				'/friend': {
+					component: _friend2.default
+				}
+			}
+		}
 	});
 	
 	router.start(App, 'body');
 	
 	//2秒后自动跳转
 	setTimeout(function () {
-	    // router.go({path:'/index/zixun'});
+		// router.go({path:'/index/zixun'});
 	}, 1000);
 
 /***/ },
@@ -310,9 +315,6 @@
 		value: true
 	});
 	// <template>
-	// <<<<<<< HEAD
-	// <router-view></router-view>
-	// =======
 	// <div class="index-container"><div class="swiper-container">
 	//   <div class="swiper-wrapper">
 	//     <div class="swiper-slide left" >
@@ -327,9 +329,9 @@
 	//     </div>
 	//     <div class="swiper-slide right" @click="hideMsg">
 	//
+	//     	<!-- 路由页面 -->
+	// 		<router-view></router-view>
 	//
-	//
-	// 				  <router-view></router-view>
 	// 		<header><img src="http://offtkz7wd.bkt.clouddn.com/img/logo.jpg" @click.stop="showMsg"></header>
 	//     	<nav>
 	//     		<ul>
@@ -347,7 +349,6 @@
 	// </div>
 	//
 	//
-	// >>>>>>> master
 	//
 	//
 	// </template>
@@ -435,7 +436,7 @@
 /* 14 */
 /***/ function(module, exports) {
 
-	module.exports = "\r\n<<<<<<< HEAD\r\n<router-view></router-view>\r\n=======\r\n<div class=\"index-container\"><div class=\"swiper-container\">\r\n  <div class=\"swiper-wrapper\">\r\n    <div class=\"swiper-slide left\" >\r\n\t\t<header>\r\n\t\t\t<img src=\"http://offtkz7wd.bkt.clouddn.com/img/logo.jpg\" alt=\"#\">\r\n\t\t\t<h3>倚马七纸</h3>\r\n\t\t</header>\r\n\t\t<ul>\r\n\t\t\t<li v-for=\"item in list\"><img v-bind:src=\"item.img\" ><span>{{item.name}}<span></li>\r\n\t\t</ul>\r\n\t\t<div class=\"setting\"><img src=\"http://offtkz7wd.bkt.clouddn.com/img/menu_setting.png\"><span>设置</span></div>\r\n    </div>\r\n    <div class=\"swiper-slide right\" @click=\"hideMsg\">\r\n    \r\n\t\r\n\r\n\t\t\t\t  <router-view></router-view>\r\n\t\t<header><img src=\"http://offtkz7wd.bkt.clouddn.com/img/logo.jpg\" @click.stop=\"showMsg\"></header>\r\n    \t<nav>\r\n    \t\t<ul>\r\n    \t\t\t<li v-for=\"item in nav_list\" v-link=\"{path:item.path}\" @click.stop=\"change_nav($index)\">\r\n    \t\t\t<img v-show=\"cur==$index? true:false\" v-bind:src=\"item.cli_img\">\r\n    \t\t\t\t<img  v-show=\"cur!=$index\" v-bind:src=\"item.img\">\r\n    \t\t\t\t<span>{{item.title}}</span>\r\n    \t\t\t</li>\r\n    \t\t</ul>\r\n    \t</nav>\r\n    </div>\r\n    \r\n  </div>\r\n</div>\r\n</div>\r\n\r\n\r\n>>>>>>> master\r\n\r\n\r\n";
+	module.exports = "\r\n<div class=\"index-container\"><div class=\"swiper-container\">\r\n  <div class=\"swiper-wrapper\">\r\n    <div class=\"swiper-slide left\" >\r\n\t\t<header>\r\n\t\t\t<img src=\"http://offtkz7wd.bkt.clouddn.com/img/logo.jpg\" alt=\"#\">\r\n\t\t\t<h3>倚马七纸</h3>\r\n\t\t</header>\r\n\t\t<ul>\r\n\t\t\t<li v-for=\"item in list\"><img v-bind:src=\"item.img\" ><span>{{item.name}}<span></li>\r\n\t\t</ul>\r\n\t\t<div class=\"setting\"><img src=\"http://offtkz7wd.bkt.clouddn.com/img/menu_setting.png\"><span>设置</span></div>\r\n    </div>\r\n    <div class=\"swiper-slide right\" @click=\"hideMsg\">\r\n    \r\n    \t<!-- 路由页面 -->\r\n\t\t<router-view></router-view>\r\n\t\t\r\n\t\t<header><img src=\"http://offtkz7wd.bkt.clouddn.com/img/logo.jpg\" @click.stop=\"showMsg\"></header>\r\n    \t<nav>\r\n    \t\t<ul>\r\n    \t\t\t<li v-for=\"item in nav_list\" v-link=\"{path:item.path}\" @click.stop=\"change_nav($index)\">\r\n    \t\t\t<img v-show=\"cur==$index? true:false\" v-bind:src=\"item.cli_img\">\r\n    \t\t\t\t<img  v-show=\"cur!=$index\" v-bind:src=\"item.img\">\r\n    \t\t\t\t<span>{{item.title}}</span>\r\n    \t\t\t</li>\r\n    \t\t</ul>\r\n    \t</nav>\r\n    </div>\r\n    \r\n  </div>\r\n</div>\r\n</div>\r\n\r\n\r\n\r\n\r\n";
 
 /***/ },
 /* 15 */
@@ -732,6 +733,7 @@
 	// 		height: 100%;
 	// 		width: 100%;
 	//
+	//
 	// 		#zixun-scroll{
 	// 			height: 100%;
 	// 			width: 100%;
@@ -767,7 +769,7 @@
 	// 			position: absolute;
 	// 			background: none;
 	// 			top:0;
-	// 			z-index: 99999;
+	// 			z-index: 99;
 	// 			background-position: center bottom;  
 	// 			background-size: 100%; 
 	// 		}
@@ -806,6 +808,8 @@
 	// 					padding-top: 0px;
 	// 				    text-align: center;
 	//    					line-height: 24px;
+	//    					position: relative;
+	//     				left: -10px;
 	// 					img{
 	// 						margin:0 audio;
 	// 						height: 14px;
@@ -995,7 +999,8 @@
 	var headerHeight = window.innerWidth / 2 - 60;
 	
 	var listurl = '/get.php?url=http://qt.qq.com/php_cgi/news/php/varcache_getnews.php&id=12&page=0&plat=android&version=9709';
-	var bannerurl = '/get.php?url=http://qt.qq.com/static/pages/news/phone/c13_list_1.shtml?plat=android&version=9709';
+	//var bannerurl = '/get.php?url=http://qt.qq.com/static/pages/news/phone/c13_list_1.shtml?plat=android&version=9709';
+	var bannerurl = '/qtqq/zixun-banner';
 	
 	exports.default = {
 	
@@ -1023,7 +1028,7 @@
 	            that = this;
 	            // console.log(Math);
 	            getJson(bannerurl, function (res) {
-	                  // console.log(res );
+	                  console.log(res);
 	                  that.banner = res.list;
 	
 	                  setTimeout(function () {
@@ -1196,22 +1201,23 @@
 	
 	function listUrl(index, isPullDown) {
 	      if (isPullDown) {
-	            return '/get.php?url=http://qt.qq.com/php_cgi/news/php/varcache_getnews.php&id=' + that.nav[index].id + '&page=0&plat=android&version=9709';
+	            return '/qtqq/zixun-list';
+	            //return '/get.php?url=http://qt.qq.com/php_cgi/news/php/varcache_getnews.php&id='+ that.nav[index].id+'&page=0&plat=android&version=9709';
 	      } else {
-	
-	            return '/get.php?url=http://qt.qq.com/php_cgi/news/php/varcache_getnews.php&id=' + that.nav[index].id + '&page=' + that.nav[index].page++ + '&plat=android&version=9709';
+	            return '/qtqq/zixun-list';
+	            //return '/get.php?url=http://qt.qq.com/php_cgi/news/php/varcache_getnews.php&id='+ that.nav[index].id+'&page='+(that.nav[index].page++)+'&plat=android&version=9709';
 	      }
 	}
 	
 	function getJson(url, succer) {
 	      Vue.http.get(url).then(function (res) {
 	
-	            var str = res.data;
-	            str = str.substring(0, str.indexOf('<script'));
+	            //      	var str = res.data;
+	            //      	str = str.substring(0,str.indexOf('<script'));
+	            console.log(res);
 	
-	            succer(JSON.parse(str));
-	            // console.log( JSON.parse(res) ) ;
-	            // succer(  JSON.parse(res.data)  );
+	            succer(res.body);
+	            //      	succer( JSON.parse( str ) ) ;
 	      });
 	}
 	// </script>
@@ -1221,7 +1227,7 @@
 /* 25 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n<div id=\"zixun-home\">\r\n\r\n\t<header v-bind:style=\"topimgurl\">\r\n\t\t<div class=\"top\" v-bind:style=\"'background: rgba(0,0,0,'+ topbgcolor+');'\" >\r\n\t\t\t<span></span>\r\n\t\t\t<span>资讯</span>\r\n\t\t\t<span> <img src=\"http://127.0.0.1/images/search_icon.png\" alt=\"\" />\r\n\t\t\t </span>\r\n\t\t</div>\r\n\t\t<div class=\"nav\" v-if=\"headerNav\">\r\n\t\t\t<span  v-bind:class=\"curlist == $index ? 'active' : '' \"  v-for=\"n in nav\"  v-on:click=\"swiperList($index)\">{{n.title}}</span>\r\n\t\t</div>\r\n\t</header>\r\n\r\n\r\n\t<!-- 滚动 IScroll -->\r\n\t<div id=\"zixun-scroll\" v-scroll=\"zixunScroll\"><div>\r\n\r\n\t\t<div v-if=\"isPull\" class=\"pull pullDownEl\">\r\n\t\t\t<img v-bind:src=\"pullPngSrc\">\r\n\t\t\t<span>{{pullDown}}</span>\r\n\t\t</div>\r\n\r\n\t\t<!-- banner -->\r\n\t\t<div class=\"swiper-container banner\" >\r\n\t\t\t  <div class=\"swiper-wrapper\">\r\n\t\t\t\t    <div class=\"swiper-slide\" v-for=\"b in banner\">\r\n\t\t\t\t    \t<img  v-bind:src=\"b.image_url_big\" alt=\"\" />\r\n\t\t\t\t    </div>\r\n\t\t\t  </div>\r\n\t\t</div>\r\n\r\n\t\t<!--  nav -->\r\n\t\t<div class=\"nav\">\r\n\t\t\t<span  v-bind:class=\"curlist == $index ? 'active' : '' \"  v-for=\"n in nav\"  v-on:click=\"swiperList($index)\">{{n.title}}</span>\r\n\t\t</div>\r\n\t\t<div class=\"swiper-container list\">\r\n\t\t\t  <div class=\"swiper-wrapper\">\r\n\t\t\t\t    <div class=\"swiper-slide\" v-for=\"n in nav\">\r\n\t\t\t\t    \t<ul>\r\n\t\t\t\t    \t\t<li v-for=\"li in list\"   v-on:click=\"listClick($index)\">\r\n\t\t\t\t\t\t    \t<div class=\"left\">\r\n\t\t\t\t\t\t    \t\t<i></i>\r\n\t\t\t\t\t\t    \t\t<img v-bind:src=\"li.image_url_small\">\r\n\t\t\t\t\t\t    \t</div>\r\n\t\t\t\t\t\t    \t<div class=\"con\">\r\n\t\t\t\t\t\t    \t\t<h3>{{li.title}}</h3>\r\n\t\t\t\t\t\t    \t\t<p>{{li.summary}}</p>\r\n\t\t\t\t\t\t    \t\t<div class=\"time\">{{li.publication_date}}{{li.pv}}</div>\r\n\t\t\t\t\t\t    \t</div>\r\n\t\t\t\t\t\t    \t<div class=\"label\" v-if=\"li.newstype\"><span>{{li.newstype}}</span></div>\r\n\t\t\t\t\t    \t</li>\r\n\t\t\t\t    \t</ul>\r\n\t\t\t\t    </div>\r\n\t\t\t  </div>\r\n\t\t</div>\r\n\t\t<div  class=\"pull pullUpEl\"> <span>上拉加载更多</span></div>\r\n\t</div></div>\r\n</div>\r\n";
+	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n<div id=\"zixun-home\">\r\n\r\n\t<header v-bind:style=\"topimgurl\">\r\n\t\t<div class=\"top\" v-bind:style=\"'background: rgba(0,0,0,'+ topbgcolor+');'\" >\r\n\t\t\t<span></span>\r\n\t\t\t<span>资讯</span>\r\n\t\t\t<span> <img src=\"http://127.0.0.1/images/search_icon.png\" alt=\"\" />\r\n\t\t\t </span>\r\n\t\t</div>\r\n\t\t<div class=\"nav\" v-if=\"headerNav\">\r\n\t\t\t<span  v-bind:class=\"curlist == $index ? 'active' : '' \"  v-for=\"n in nav\"  v-on:click=\"swiperList($index)\">{{n.title}}</span>\r\n\t\t</div>\r\n\t</header>\r\n\r\n\r\n\t<!-- 滚动 IScroll -->\r\n\t<div id=\"zixun-scroll\" v-scroll=\"zixunScroll\"><div>\r\n\r\n\t\t<div v-if=\"isPull\" class=\"pull pullDownEl\">\r\n\t\t\t<img v-bind:src=\"pullPngSrc\">\r\n\t\t\t<span>{{pullDown}}</span>\r\n\t\t</div>\r\n\r\n\t\t<!-- banner -->\r\n\t\t<div class=\"swiper-container banner\" >\r\n\t\t\t  <div class=\"swiper-wrapper\">\r\n\t\t\t\t    <div class=\"swiper-slide\" v-for=\"b in banner\">\r\n\t\t\t\t    \t<img  v-bind:src=\"b.image_url_big\" alt=\"\" />\r\n\t\t\t\t    </div>\r\n\t\t\t  </div>\r\n\t\t</div>\r\n\r\n\t\t<!--  nav -->\r\n\t\t<div class=\"nav\">\r\n\t\t\t<span  v-bind:class=\"curlist == $index ? 'active' : '' \"  v-for=\"n in nav\"  v-on:click=\"swiperList($index)\">{{n.title}}</span>\r\n\t\t</div>\r\n\t\t<div class=\"swiper-container list\">\r\n\t\t\t  <div class=\"swiper-wrapper\">\r\n\t\t\t\t    <div class=\"swiper-slide\" v-for=\"n in nav\">\r\n\t\t\t\t    \t<ul>\r\n\t\t\t\t    \t\t<li v-for=\"li in list\"   v-on:click=\"listClick($index)\">\r\n\t\t\t\t\t\t    \t<div class=\"left\">\r\n\t\t\t\t\t\t    \t\t<i></i>\r\n\t\t\t\t\t\t    \t\t<img v-bind:src=\"li.image_url_small\">\r\n\t\t\t\t\t\t    \t</div>\r\n\t\t\t\t\t\t    \t<div class=\"con\">\r\n\t\t\t\t\t\t    \t\t<h3>{{li.title}}</h3>\r\n\t\t\t\t\t\t    \t\t<p>{{li.summary}}</p>\r\n\t\t\t\t\t\t    \t\t<div class=\"time\">{{li.publication_date}}{{li.pv}}</div>\r\n\t\t\t\t\t\t    \t</div>\r\n\t\t\t\t\t\t    \t<div class=\"label\" v-if=\"li.newstype\"><span>{{li.newstype}}</span></div>\r\n\t\t\t\t\t    \t</li>\r\n\t\t\t\t    \t</ul>\r\n\t\t\t\t    </div>\r\n\t\t\t  </div>\r\n\t\t</div>\r\n\t\t<div  class=\"pull pullUpEl\"> <span>上拉加载更多</span></div>\r\n\t</div></div>\r\n</div>\r\n";
 
 /***/ },
 /* 26 */
@@ -1563,13 +1569,17 @@
 			var _this = this;
 	
 			that = this;
-			// Vue.http.get('http://127.0.0.1/mock/comment.json')
-			Vue.http.get('/commen.php').then(function (res) {
+			Vue.http.get('/qtqq/comment')
+			//		Vue.http.get('/commen.php')
+			.then(function (res) {
 				console.log(res);
 	
-				var str = res.body;
-				str = str.substring(0, str.indexOf('<script'));
-				_this.comment = JSON.parse(str);
+				//			var str = res.body;
+				//      	str = str.substring(0,str.indexOf('<script'));
+				//			this.comment  =  JSON.parse( str);
+	
+				_this.comment = res.body;
+	
 				for (var i = 0; i < _this.comment.length; i++) {
 					_this.$set('comment[' + i + '].iszan', false);
 				}

@@ -1878,7 +1878,9 @@ a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
   #comment .header {
     height: 44px;
     width: 100%;
@@ -2046,6 +2048,7 @@ a {
     flex: 1;
     width: .1px;
     width: 100%;
+    background: #ebebeb;
     overflow: hidden; }
     #comment .comment-scroll ul li {
       padding: 5px;
@@ -2155,7 +2158,9 @@ a {
 #zixun-content {
   display: flex;
   height: 100%;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
   #zixun-content .header {
     height: 44px;
     width: 100%;
@@ -2301,36 +2306,36 @@ a {
   height: 100%;
   width: 100%;
   position: relative; }
-  .index-container .swiper-container {
+  .index-container > .swiper-container {
     height: 100%;
     width: 100%; }
-    .index-container .swiper-container > .swiper-wrapper {
+    .index-container > .swiper-container > .swiper-wrapper {
       height: 100%;
       width: 100%; }
-      .index-container .swiper-container > .swiper-wrapper > .swiper-slide {
+      .index-container > .swiper-container > .swiper-wrapper > .swiper-slide {
         height: 100%;
         width: 100%; }
-        .index-container .swiper-container > .swiper-wrapper > .swiper-slide:nth-child(1) {
+        .index-container > .swiper-container > .swiper-wrapper > .swiper-slide:nth-child(1) {
           background: url("http://offtkz7wd.bkt.clouddn.com/img/slide_menu_bg.jpg") no-repeat;
           background-size: cover;
           width: 50% !important; }
-      .index-container .swiper-container > .swiper-wrapper .left {
+      .index-container > .swiper-container > .swiper-wrapper .left {
         position: relative; }
-        .index-container .swiper-container > .swiper-wrapper .left header {
+        .index-container > .swiper-container > .swiper-wrapper .left > header {
           padding-top: 20px;
           padding-right: 15px;
           padding-left: 15px; }
-          .index-container .swiper-container > .swiper-wrapper .left header img {
+          .index-container > .swiper-container > .swiper-wrapper .left > header img {
             border-radius: 50%;
             width: 30%; }
-          .index-container .swiper-container > .swiper-wrapper .left header h3 {
+          .index-container > .swiper-container > .swiper-wrapper .left > header h3 {
             padding-top: 20px;
             padding-left: 5px;
             font-size: 14px;
             color: #fff;
             padding-bottom: 30px;
             position: relative; }
-            .index-container .swiper-container > .swiper-wrapper .left header h3::after {
+            .index-container > .swiper-container > .swiper-wrapper .left > header h3::after {
               pointer-events: none;
               position: absolute;
               z-index: 999;
@@ -2344,37 +2349,37 @@ a {
               -webkit-transform-origin: 0 0;
               transform-origin: 0 0; }
               @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
-                .index-container .swiper-container > .swiper-wrapper .left header h3::after {
+                .index-container > .swiper-container > .swiper-wrapper .left > header h3::after {
                   width: 100%;
                   height: 100%; } }
               @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
-                .index-container .swiper-container > .swiper-wrapper .left header h3::after {
+                .index-container > .swiper-container > .swiper-wrapper .left > header h3::after {
                   width: 200%;
                   height: 200%;
                   -webkit-transform: scale(0.5);
                   transform: scale(0.5); } }
               @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
-                .index-container .swiper-container > .swiper-wrapper .left header h3::after {
+                .index-container > .swiper-container > .swiper-wrapper .left > header h3::after {
                   width: 300%;
                   height: 300%;
                   -webkit-transform: scale(0.33333);
                   transform: scale(0.33333); } }
-        .index-container .swiper-container > .swiper-wrapper .left ul {
+        .index-container > .swiper-container > .swiper-wrapper .left ul {
           padding-top: 40px; }
-          .index-container .swiper-container > .swiper-wrapper .left ul li {
+          .index-container > .swiper-container > .swiper-wrapper .left ul li {
             height: 40px;
             padding-left: 20px;
             display: -webkit-box;
             display: -webkit-flex;
             display: flex; }
-            .index-container .swiper-container > .swiper-wrapper .left ul li img {
+            .index-container > .swiper-container > .swiper-wrapper .left ul li img {
               height: 50%;
               display: block; }
-            .index-container .swiper-container > .swiper-wrapper .left ul li span {
+            .index-container > .swiper-container > .swiper-wrapper .left ul li span {
               padding-left: 20px;
               display: block;
               color: #fff; }
-        .index-container .swiper-container > .swiper-wrapper .left .setting {
+        .index-container > .swiper-container > .swiper-wrapper .left .setting {
           position: absolute;
           left: 10px;
           bottom: 20px;
@@ -2383,26 +2388,26 @@ a {
           display: -webkit-box;
           display: -webkit-flex;
           display: flex; }
-          .index-container .swiper-container > .swiper-wrapper .left .setting img {
+          .index-container > .swiper-container > .swiper-wrapper .left .setting img {
             height: 50%;
             display: block; }
-          .index-container .swiper-container > .swiper-wrapper .left .setting span {
+          .index-container > .swiper-container > .swiper-wrapper .left .setting span {
             padding-left: 10px;
             display: block;
             color: #fff; }
-      .index-container .swiper-container > .swiper-wrapper .right header {
+      .index-container > .swiper-container > .swiper-wrapper .right > header {
         width: 100%;
         position: absolute;
         width: 39px;
         top: 5px;
-        padding-left: 20px;
-        height: 44px;
+        padding-left: 15px;
+        height: 36px;
         padding-top: 5px;
         z-index: 100; }
-        .index-container .swiper-container > .swiper-wrapper .right header img {
+        .index-container > .swiper-container > .swiper-wrapper .right > header img {
           border-radius: 50%;
           height: 100%; }
-      .index-container .swiper-container > .swiper-wrapper .right nav {
+      .index-container > .swiper-container > .swiper-wrapper .right nav {
         position: absolute;
         bottom: 0;
         height: 55px;
@@ -2410,13 +2415,13 @@ a {
         width: 100%;
         background: #f0f0f0;
         z-index: 100; }
-        .index-container .swiper-container > .swiper-wrapper .right nav ul {
+        .index-container > .swiper-container > .swiper-wrapper .right nav ul {
           height: 100%;
           width: 100%;
           display: -webkit-box;
           display: -webkit-flex;
           display: flex; }
-          .index-container .swiper-container > .swiper-wrapper .right nav ul li {
+          .index-container > .swiper-container > .swiper-wrapper .right nav ul li {
             -webkit-box-flex: 1;
             -webkit-flex: 1;
             flex: 1;
@@ -2431,9 +2436,9 @@ a {
             -webkit-box-align: center;
             -webkit-align-items: center;
             align-items: center; }
-            .index-container .swiper-container > .swiper-wrapper .right nav ul li img {
+            .index-container > .swiper-container > .swiper-wrapper .right nav ul li img {
               width: 30%; }
-            .index-container .swiper-container > .swiper-wrapper .right nav ul li span {
+            .index-container > .swiper-container > .swiper-wrapper .right nav ul li span {
               font-size: 12px; }
 
 /**
@@ -3954,7 +3959,7 @@ a {
     position: absolute;
     background: none;
     top: 0;
-    z-index: 99999;
+    z-index: 99;
     background-position: center bottom;
     background-size: 100%; }
   #zixun-home .banner {
@@ -3988,7 +3993,9 @@ a {
         background: rgba(0, 0, 0, 0.7);
         padding-top: 0px;
         text-align: center;
-        line-height: 24px; }
+        line-height: 24px;
+        position: relative;
+        left: -10px; }
         #zixun-home .top span:nth-child(3) img {
           margin: 0 audio;
           height: 14px;
