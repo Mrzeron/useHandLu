@@ -22,71 +22,69 @@ import zixunHome from './components/zixun/home.vue';
 import zixuncontent from './components/zixun/zixuncontent.vue';
 import comment from './components/zixun/comment.vue';
 
+import common from './utils/common.util';
 
-import common from './utils/common.util.js';
 common.myScroll();
 
-
-
-let router = new VueRouter();
-let App = Vue.extend({
+const router = new VueRouter();
+const App = Vue.extend({
   /*store:store*/
 });
 router.map({
   '/': {
-    component: welcome
+    component: welcome,
   },
-  '/signin':{
-    component:signin
+  '/signin': {
+    component: signin,
   },
-  '/index':{
-    component:index,
-    subRoutes:{
-      '/':{
+  '/index': {
+    component: index,
+    subRoutes: {
+      '/': {
         component: zixun,
-        subRoutes : {
+        subRoutes: {
           '/': {
-            component: zixunHome
-          }
-        }
+            component: zixunHome,
+          },
+        },
       },
-      '/zixun':{
+      '/zixun': {
         component: zixun,
-        subRoutes : {
+        subRoutes: {
           '/': {
-            component: zixunHome
+            component: zixunHome,
           },
           '/content': {
-            component: zixuncontent
+            component: zixuncontent,
           },
-          '/comment':{
-            component: comment
-          }
-        }
+          '/comment': {
+            component: comment,
+          },
+        },
       },
-      '/friend':{
-        component:friend
+      '/friend': {
+        component: friend,
       },
-      '/my':{
-        component:my
+      '/my': {
+        component: my,
       },
-      '/search':{
-        component:search
-      }
-    }
+      '/search': {
+        component: search,
+      },
+    },
   },
-  '/searchHeroTime':{
-    component:searchHeroTime
+  '/searchHeroTime': {
+    component: searchHeroTime,
   },
-  '/heroData':{
-    component:heroData,
-  }
+  '/heroData': {
+    component: heroData,
+  },
 });
 
-router.start(App, 'body')
+router.start(App, 'body');
 
 
-//2秒后自动跳转】
-setTimeout(function(){
-	router.go({path:'/signin'});
-},2000)
+// 2秒后自动跳转】
+setTimeout(() => {
+  router.go({ path: '/signin' });
+}, 2000);
